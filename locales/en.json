@@ -4,8 +4,13 @@
     "whois": "Who is Mirte?",
     "robots": "Robots",
     "configure": "Configure",
-    "getting_started": "Getting Started",
-    "contribute": "Contribute"
+    "start": "Getting Started",
+    "contribute": "Contribute",
+    "primary": "Primary education",
+    "secondary": "Secondary education",
+    "higher": "Higher education",
+    "workshops": "Workshops (NL)",
+    "docs": "Documentation"
   },
   "footer": "is being developed by",
   "home": {

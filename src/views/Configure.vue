@@ -5,18 +5,24 @@
   <div class="container">
     <div class="row">
       <div class="col-4" @click="mirte='light'" style="text-align: center;">
-        <button style="padding: 10px;">
+        <button :style="mirte == 'light' ? 'background-color: #f1be45;': ''">
+         <div style="padding: 10px;">
          <img src="@/assets/images/light_render.png" style="max-height:50px;"/><span class="mirte">MIRTE</span> light
+         </div>
         </button> 
       </div>
       <div class="col-4" @click="mirte='basic'" style="text-align: center;">
-        <button style="padding: 10px;">
+        <button :style="mirte == 'basic' ? 'background-color: #f1be45;': ''">
+         <div style="padding: 10px;">
          <img src="@/assets/images/basic_render.png" style="max-height:50px;"/><span class="mirte">MIRTE</span> basic
+         </div>
         </button>
       </div>
       <div class="col-4" @click="mirte='pioneer'" style="text-align: center;">
-        <button style="padding: 10px;">
+        <button :style="mirte == 'pioneer' ? 'background-color: #f1be45;': ''">
+         <div style="padding: 10px;">
          <img src="@/assets/images/pioneer_render.png" style="max-height:50px;"/><span class="mirte">MIRTE</span> pioneer
+         </div>
         </button>
       </div>
     </div>

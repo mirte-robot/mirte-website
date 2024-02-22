@@ -2,6 +2,7 @@ import { createWebHistory, createRouter } from "vue-router";
 import Home from "@/views/Home.vue";
 import Robots from "@/views/Robots.vue";
 import Configure from "@/views/Configure.vue";
+import Start from "@/views/Start.vue";
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     name: "Configure",
     component: Configure,
   },
+  {
+    path: "/start",
+    name: "Start",
+    component: Start,
+  }
 ];
 
 const router = createRouter({

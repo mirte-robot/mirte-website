@@ -28,13 +28,25 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="/#/robots" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ $t("navbar.start") }}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+            <router-link to="/start?l=primary" class="nav-link">{{ $t("navbar.primary") }}</router-link>
+            <router-link to="/start?l=secondary" class="nav-link">{{ $t("navbar.secondary") }}</router-link>
+            <router-link to="/start?l=higher" class="nav-link">{{ $t("navbar.higher") }}</router-link>
+            <div class="dropdown-divider"></div>
+            <a href="https://workshops.mirte.org/" class="nav-link">{{ $t("navbar.workshops") }}</a>
+            <a href="https://docs.mirte.org/" class="nav-link">{{ $t("navbar.docs") }}</a>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/#/robots" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{ $t("navbar.contribute") }}
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
              <a class="nav-link" href="https://github.com/mirte-robot">Github</a>
           </ul>
         </li>
-
       </ul>
     </div>
   </div>
