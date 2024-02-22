@@ -3,12 +3,14 @@
 <div class="bgimage">
 
 
+
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
          <img src="@/assets/images/mirte_drawing.png" style="margin: auto; width:100%"/>
       </div>
 
+ {{ $t("main.hello") }}
       <div class="col-sm-6 align-items-center d-flex text-center">
         <div class="text-center">
           <h1>MIRTE</h1>
