@@ -1,5 +1,60 @@
 {
-  "main": {
-    "hello": "Hello World!"
+  "navbar": {
+    "home": "Home",
+    "whois": "Who is Mirte?",
+    "robots": "Robots",
+    "configure": "Configure",
+    "getting_started": "Getting Started",
+    "contribute": "Contribute"
+  },
+  "footer": "is being developed by",
+  "home": {
+    "home": "A low-cost fully open source educational robot track from primary school up to univerity level. Using a standard set of off-the-shelf components one can gradually learn about multiple engineering disciplines (eg. mechanical, software, and electical).",
+    "check_robots": "Check out all"
+  },
+  "configure": {
+    "chose": "CHOOSE YOUR ITEMS",
+    "single_board_computer": "Single Board Computer",
+    "micro_controller": "Micro Controller",
+    "motor_controller": "Motor Controller",
+    "wiring": "Wiring",
+    "motors": "Motors",
+    "misc": "Misc",
+    "power": "Power Supply",
+    "actuators": "Actuators (optional)",
+    "sensors": "Sensors (optional)",
+    "orange_pi_zero2": "Orange Pi Zero 2",
+    "raspberry_pi": "Raspberry Pi 2/3/4",
+    "raspberry_pico": "Raspberry Pi Pico H",
+    "arduino_uno": "Arduino Uno",
+    "arduino_nano": "Arduino Nano",
+    "stm32": "STM32",
+    "l9110s": "L9110S",
+    "l298n": "L298N",
+    "mx1919": "MX1919",
+    "breadboard": "Breadboard (Dupont)",
+    "pcb": "MIRTE PCB (JST)",
+    "yellow_motor": "3-6V Yellow DC Motor (2x)",
+    "blue_motor": "3-6V Blue DC Motor incl encoder (2x)",
+    "sd_card": "16GB SD Card",
+    "caster_wheel": "Ball caster wheel",
+    "wheel": "Yellow wheel",
+    "power_bank": "5V Power Bank",
+    "breadboard_supply": "Breadboard Power (MB102)",
+    "usb_cable": "Micro USB cable",
+    "servo": "SG90 Servo (2x)",
+    "oled": "128x64 I2C Oled (2x)",
+    "reflectance_sensor": "Reflectance (TCRT5000) (2x)",
+    "light_sensor": "Light LDR (LM393) (2x)",
+    "ir_obstacle_sensor": "IR obstacle (2x)",
+    "us_distance_sensor": "Ultrasonic Distance (HC-SR04) (2x)",
+    "keypad": "5 Key Keypad",
+    "camera": "USB Camera"
+  },
+  "robots": {
+    "light": "Info about Mirte light",
+    "basic": "Info about Mirte basic",
+    "pioneer": "Info about Mirte pioneer"
   }
 }
+

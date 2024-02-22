@@ -1,5 +1,43 @@
 {
-  "main": {
-    "hello": "Hallo Wereld!"
+  "navbar": {
+    "home": "Home",
+    "whois": "Wie is Mirte?",
+    "robots": "Robots",
+    "configure": "Configureer",
+    "getting_started": "Beginnen",
+    "contribute": "Meehelpen"
+  },
+  "footer": "wordt ontwikkeld door",
+  "home": {
+    "home": "Een goedkope volledig open source onderwijs robotlijn vanaf basisonserwijs tot aan de universiteit. Met een standaard set onderdelen kan men stap voor stap leren over de verschillende technische disciplines (eg. werktuigbouw, software, and electronica).",
+    "check_robots": "Bekijk alle"
+  },
+  "configure": {
+    "chose": "KIES JE ONDERDELEN",
+    "wiring": "Bedrading",
+    "motors": "Motoren",
+    "misc": "Diversen",
+    "actuators": "Actuatoren (optioneel)",
+    "sensors": "Sensoren (optioneel)",
+    "yellow_motor": "3-6V Gele DC Motor (2x)",
+    "blue_motor": "3-6V Blauwe DC Motor incl encoder (2x)",
+    "sd_card": "16GB SD Kaart",
+    "caster_wheel": "Kogelwiel",
+    "wheel": "Geel wiel",
+    "power_bank": "5V Power Bank",
+    "breadboard_supply": "Breadboard Power (MB102)",
+    "usb_cable": "Micro USB kabel",
+    "reflectance_sensor": "Reflectie (TCRT5000) (2x)",
+    "light_sensor": "Lichtt LDR (LM393) (2x)",
+    "ir_obstacle_sensor": "IR obstakel (2x)",
+    "us_distance_sensor": "Ultrasoon afstand (HC-SR04) (2x)",
+    "keypad": "5 Toesten Toetsenbord",
+    "camera": "USB Camera"
+  },
+  "robots": {
+    "light": "Info over Mirte light",
+    "basic": "Info over Mirte basic",
+    "pioneer": "Info over Mirte pioneer"
   }
 }
+

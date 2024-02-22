@@ -9,5 +9,5 @@ module.exports = {
       enableInSFC: true
     }
   },
-  publicPath: './',
+//  publicPath: './',
 }

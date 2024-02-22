@@ -9,26 +9,26 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <router-link to="/" class="nav-link">Home</router-link>
+          <router-link to="/" class="nav-link">{{ $t("navbar.home") }}</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/whois" class="nav-link">Who is Mirte?</router-link>
+          <router-link to="/whois" class="nav-link">{{ $t("navbar.whois") }}</router-link>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="/#/robots" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Robots
+            {{ $t("navbar.robots") }}
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
             <router-link to="/robots?r=light" class="nav-link"><span class="mirte">MIRTE</span> Light</router-link>
             <router-link to="/robots?r=basic" class="nav-link"><span class="mirte">MIRTE</span> Basic</router-link>
             <router-link to="/robots?r=pioneer" class="nav-link"><span class="mirte">MIRTE</span> Pioneer</router-link>
             <div class="dropdown-divider"></div>
-            <router-link to="/configure" class="nav-link">Configure</router-link>
+            <router-link to="/configure" class="nav-link">{{ $t("navbar.configure") }}</router-link>
           </ul>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="/#/robots" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Contribute
+            {{ $t("navbar.contribute") }}
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
              <a class="nav-link" href="https://github.com/mirte-robot">Github</a>

@@ -21,17 +21,17 @@
       </div>
     </div>
 
-    <h1 style="text-align: center;padding-top: 20px;">CHOOSE YOUR ITEMS</H1>
+    <h1 style="text-align: center;padding-top: 20px;">{{ $t("configure.chose") }}</H1>
 
     <div class="row">
       <div class="col-sm-3" v-for="component in hardware" style="padding-top: 40px;">
         <div :style="robots[mirte]['disabled'].includes(component.name) ? 'color: #ccc;' : ''">
-        {{ component.name }}
+        {{ $t("configure." + component.name) }}
         </div>
         <div v-for="option in component.options" style="font-family:'Overpass-Light'; padding-top: 7px;">
           <input style="accent-color: #9db7be;" type="checkbox" value="" id="flexCheckDefault" :checked="robots[mirte]['selected'].includes(option)" :disabled="robots[mirte]['disabled'].includes(option)">
           <label class="form-check-label" for="flexCheckDefault">
-            {{ option }}
+            {{ $t("configure." + option) }}
           </label>
           </div>
         </div>
@@ -53,26 +53,27 @@
 export default {
 
     data() {
+      // The variable names used here are all from i18n lin locales
       return {
         mirte: 'basic',
         robots: {
-          light: {'selected': ['L9110S', '(2x) 3-6V Yellow DC Motor', 'Breadboard (Dupont)', 'Ball caster wheel', '(2x) Yellow wheel', 'Breadboard supply (MB102)','5V Power bank','Micro USB cable','(2x) Reflectance (TCRT5000)', '(2x) Light LDR (LM393)', '(2x) IR obstacle'],
-                  'disabled': ['Single Board Computer', 'Orange Pi Zero 2', 'Raspberry Pi 2/3/4', 'Micro Controller', 'Raspberry Pi Pico H', 'Arduino Nano', 'Arduino Uno', 'STM32', '(2x) 3-6V Blue DC Motor incl encoder', 'MIRTE PCB (JST)', '16GB SD Card', '(2x) SG90 Servo', '(2x) 128x64 I2C OLED', '(2x) Ultrasonic Distance (HC-SR04)', '5 Key Keypad', 'USB Camera']},
-          basic: {'selected': ['Raspberry Pi Pico H', 'L9110S', '(2x) 3-6V Yellow DC Motor', 'Breadboard (Dupont)', 'Ball caster wheel', '(2x) Yellow wheel', 'Breadboard supply (MB102)','5V Power bank','Micro USB cable','(2x) Reflectance (TCRT5000)', '(2x) Light LDR (LM393)', '(2x) IR obstacle', '(2x) Ultrasonic Distance (HC-SR04)', '5 Key Keypad'],
-                  'disabled': ['Single Board Computer', 'Orange Pi Zero 2', 'Raspberry Pi 2/3/4', 'Arduino Nano', 'Arduino Uno', 'STM32', '(2x) 3-6V Blue DC Motor incl encoder', '16GB SD Card', 'USB Camera']},
-          pioneer: {'selected': ['Orange Pi Zero 2', 'Raspberry Pi Pico H', 'L9110S', '(2x) 3-6V Yellow DC Motor', 'MIRTE PCB (JST)', '16GB SD Card', 'Ball caster wheel', '(2x) Yellow wheel', '5V Power bank','Micro USB cable', '(2x) SG90 Servo', '(2x) 128x64 I2C OLED', '(2x) Reflectance (TCRT5000)', '(2x) Light LDR (LM393)', '(2x) IR obstacle', '(2x) Ultrasonic Distance (HC-SR04)', '5 Key Keypad', 'USB Camera'],
+          light: {'selected': ['l9110s', 'yellow_motor', 'breadboard', 'caster_wheel', 'wheel', 'breadboard_supply','power_bank','usb_cable','reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor'],
+                  'disabled': ['single_board_computer', 'orange_pi_zero2', 'raspberry_pi', 'micro_controller', 'raspberry_pico', 'arduino_nano', 'arduino_uno', 'stm32', 'blue_motor', 'pcb', 'sd_card', 'servo', 'oled', 'us_distance_sensor', 'keypad', 'camera']},
+          basic: {'selected': ['raspberry_pico', 'l9110s', 'yellow_motor', 'breadboard', 'caster_wheel', 'wheel', 'breadboard_supply','power_bank','usb_cable','reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor', 'us_distance_sensor', 'keypad'],
+                  'disabled': ['single_board_computer', 'orange_pi_zero2', 'raspberry_pi', 'arduino_nano', 'arduino_uno', 'stm32', 'blue_motor', 'sd_card', 'camera']},
+          pioneer: {'selected': ['orange_pi_zero2', 'raspberry_pico', 'l9110s', 'yellow_motor', 'pcb', 'sd_card', 'caster_wheel', 'wheel', 'power_bank','usb_cable', 'servo', 'oled', 'reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor', 'us_distance_sensor', 'keypad', 'camera'],
                     'disabled': []}
         },
         hardware: [
-          {name: 'Single Board Computer', options: ['Orange Pi Zero 2', 'Raspberry Pi 2/3/4']},
-          {name: 'Micro Controller', options: ['Raspberry Pi Pico H', 'Arduino Nano', 'Arduino Uno', 'STM32']},
-          {name: 'Motor Controller', options: ['L9110S', 'L298N', 'MX1919']},
-          {name: 'Wiring', options: ['Breadboard (Dupont)', 'MIRTE PCB (JST)']},
-          {name: 'Motors', options: ['(2x) 3-6V Yellow DC Motor', '(2x) 3-6V Blue DC Motor incl encoder']},
-          {name: 'Misc', options: ['16GB SD Card', 'Ball caster wheel', '(2x) Yellow wheel']},
-          {name: 'Power Supply', options: ['5V Power bank', 'Breadboard supply (MB102)', 'Micro USB cable']},
-          {name: 'Actuators (optional)', options: ['(2x) SG90 Servo', '(2x) 128x64 I2C OLED']},
-          {name: 'Sensors (optional)', options: ['(2x) Reflectance (TCRT5000)', '(2x) Light LDR (LM393)', '(2x) IR obstacle', '(2x) Ultrasonic Distance (HC-SR04)', '5 Key Keypad', 'USB Camera']},
+          {name: 'single_board_computer', options: ['orange_pi_zero2', 'raspberry_pi']},
+          {name: 'micro_controller', options: ['raspberry_pico', 'arduino_nano', 'arduino_uno', 'stm32']},
+          {name: 'motor_controller', options: ['l9110s', 'l298n', 'mx1919']},
+          {name: 'wiring', options: ['breadboard', 'pcb']},
+          {name: 'motors', options: ['yellow_motor', 'blue_motor']},
+          {name: 'misc', options: ['sd_card', 'caster_wheel', 'wheel']},
+          {name: 'power', options: ['power_bank', 'breadboard_supply', 'usb_cable']},
+          {name: 'actuators', options: ['servo', 'oled']},
+          {name: 'sensors', options: ['reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor', 'us_distance_sensor', 'keypad', 'camera']},
         ]
       }
     }

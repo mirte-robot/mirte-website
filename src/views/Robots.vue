@@ -12,7 +12,7 @@
         </div>
         <div>
           <h5>MIRTE light</h5>
-          <p>Info about ...</p>
+          <p>{{ $t("robots.light") }}</p>
         </div>
 
      </div>
@@ -25,7 +25,7 @@
         </div>
         <div>
           <h5>MIRTE basic</h5>
-          <p>Info about ...</p>
+          <p>{{ $t("robots.basic") }}</p>
         </div>
 
      </div>
@@ -38,7 +38,7 @@
         </div>
         <div>
           <h5>MIRTE pioneer</h5>
-          <p>Info about ...</p>
+          <p>{{ $t("robots.pioneer") }}</p>
         </div>
 
      </div>
