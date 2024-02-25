@@ -57,9 +57,29 @@
     "camera": "USB Camera"
   },
   "robots": {
-    "light": "Info about Mirte light",
-    "basic": "Info about Mirte basic",
-    "pioneer": "Info about Mirte pioneer"
+    "light": "Start learning about basic electronics and robot behaviour. By just connecting two sensors to the motors (using the motor controller) one can build a robot that reacts to the sensors. Moving away from or towards the light, or not bumping into obstacles.",
+    "basic": "Learn about software (blockbased and Python). By adding a microcontroller one can create more complex behaviours and use more sensors.",
+    "pioneer": "Explore all robotic possibilities. By adding a computer one can use even more sensors (camera, but even lidar) and a gripper. Apart from programming in blocks and Python, one can also use all possibilites of Robot Operating System (ROS).",
+    "start": "Get started!"
+  },
+  "start": {
+    "coming_soon": "Coming soon",
+    "construction": "We are currentl still finalizing this part of the robot.",
+    "download_base": "Download Base",
+    "download_base_text": "Select the files of the base of MIRTE",
+    "lasercut": "DXF - lasercut 4mm plywood",
+    "dxf_source": "FreeCAD source files",
+    "get_hardware": "Get Hardware",
+    "get_hardware_text": "Select a Single Board Computer, Microcontroller, and check the other hardware you need in the",
+    "download_software": "Download Software",
+    "download_software_text": "Select the SD card image for your Single Board Computer",
+    "software_source_release": "Source code of latest release",
+    "software_source_latest": "Latest source code",
+    "build_and_learn": "Build and Learn",
+    "build_and_learn_text": "Follow the build instructions and check out the",
+    "documentation": "documentation",
+    "workshops": "workshops",
+    "download": "Download"
   }
 }
 

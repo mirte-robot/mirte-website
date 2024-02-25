@@ -22,7 +22,7 @@
     </div>
     <div class="row">
       <div class="text-center">
-       <a class="btn btn-primary my-button" href="/robots?r=light" role="button">{{ $t("home.check_robots") }} <span class="mirte">MIRTE</span> robots!</a>
+      <router-link to="robots?r=light"><button class="btn my-button">{{ $t("home.check_robots") }} <span class="mirte">MIRTE</span> robots!</button></router-link>       
     </div>
 
    </div>

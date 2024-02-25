@@ -12,9 +12,9 @@
         </div>
         <div>
           <h5>MIRTE light</h5>
-          <p>{{ $t("robots.light") }}</p>
+          <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.light") }}</p>
+          <router-link to="start?l=primary&r=light"><button class="btn my-button">{{ $t("robots.start") }}</button></router-link>          
         </div>
-
      </div>
    </div>
 
@@ -25,7 +25,8 @@
         </div>
         <div>
           <h5>MIRTE basic</h5>
-          <p>{{ $t("robots.basic") }}</p>
+          <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.basic") }}</p>
+          <router-link to="start?l=primary&r=basic"><button class="btn my-button">{{ $t("robots.start") }}</button></router-link>
         </div>
 
      </div>
@@ -38,7 +39,8 @@
         </div>
         <div>
           <h5>MIRTE pioneer</h5>
-          <p>{{ $t("robots.pioneer") }}</p>
+          <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.pioneer") }}</p>
+          <router-link to="start?l=secondary&r=pioneer"><button class="btn my-button">{{ $t("robots.start") }}</button></router-link>
         </div>
 
      </div>

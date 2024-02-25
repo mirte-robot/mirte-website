@@ -4,7 +4,7 @@
     "whois": "Wie is Mirte?",
     "robots": "Robots",
     "configure": "Configureer",
-    "start": "Beginnen",
+    "start": "Aan de slag",
     "contribute": "Meehelpen",
     "primary": "Primair onderwijs",
     "secondary": "Voortgezet onderwijs",
@@ -14,7 +14,7 @@
   },
   "footer": "wordt ontwikkeld door",
   "home": {
-    "home": "Een goedkope volledig open source onderwijs robotlijn vanaf basisonserwijs tot aan de universiteit. Met een standaard set onderdelen kan men stap voor stap leren over de verschillende technische disciplines (eg. werktuigbouw, software, and electronica).",
+    "home": "Een goedkope volledig open source onderwijs robotlijn vanaf basisonserwijs tot aan de universiteit. Met een standaard set onderdelen kan men stap voor stap leren over de verschillende technische disciplines (eg. mechanica, software, and electronica).",
     "check_robots": "Bekijk alle"
   },
   "configure": {
@@ -40,9 +40,30 @@
     "camera": "USB Camera"
   },
   "robots": {
-    "light": "Info over Mirte light",
-    "basic": "Info over Mirte basic",
-    "pioneer": "Info over Mirte pioneer"
+    "light": "Leer de basis over electronica en robot gedrag. Door twee sensoren aan de motoren te koppelen (met de motor controller) kan je een robot bouwen die reageert op deze sensoren. De robot zal naar het licht toe of van het licht af bewegen. Of juist obstakels vermijden.",
+    "basic": "Leer over software (blokken en Python). Door een microcontroller toe te voegen kan je complexer gedrag maken en more sensoren gebruiken.",
+    "pioneer": "Ontdek alle mogelijkheden van robotica. Door een computer toe te voegen kunnen nog meer sensoren gebruikt worden (camera en zelfs lidar) en een gripper. Naast programmeren in blokken en Python, kunnen nu alle mogelijkheden van Robot Operating System (ROS) benut worden.",
+    "start": "Aan de slag!"
+  },
+  "start": {
+    "coming_soon": "Coming soon",
+    "construction": "Op dit moment leggen we de laatste hand aan dit deel van de robot.",
+    "download_base": "Download Base",
+    "download_base_text": "Selecteer de bestanden voor het frame van MIRTE",
+    "lasercut": "DXF - lasersnijden 4mm multiplex",
+    "dxf_source": "FreeCAD source bestanden",
+    "get_hardware": "Hardware",
+    "get_hardware_text": "Selecteer een Computer, Microcontroller, en bekijk de ander noodzakelijk hardware in de",
+    "download_software": "Download Software",
+    "download_software_text": "Selecteer het SD-kaart image voor de computer",
+    "software_source_release": "Source code van de laatste source",
+    "software_source_latest": "Laatste source code",
+    "build_and_learn": "Bouw en Leer",
+    "build_and_learn_text": "Bouw je robot en bekijk de",
+    "documentation": "documentatie",
+    "workshops": "workshops",
+    "download": "Download"
   }
-}
 
+
+}

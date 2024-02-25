@@ -29,6 +29,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
+  base: '/web_new/',
   routes,
 });
 

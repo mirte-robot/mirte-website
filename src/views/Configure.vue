@@ -1,9 +1,8 @@
 <template>
 
 <div>
-
   <div class="container">
-    <div class="row">
+    <div v-if="chose" class="row">
       <div class="col-4" @click="mirte='light'" style="text-align: center;">
         <button :style="mirte == 'light' ? 'background-color: #f1be45;': ''">
          <div style="padding: 10px;">
@@ -27,7 +26,8 @@
       </div>
     </div>
 
-    <h1 style="text-align: center;padding-top: 20px;">{{ $t("configure.chose") }}</H1>
+    <h1 v-if="chose" style="text-align: center;padding-top: 20px;">{{ $t("configure.chose") }}</h1>
+    <h1 v-else style="text-align: center;padding-top: 20px;">MIRTE {{ mirte }}</h1>
 
     <div class="row">
       <div class="col-sm-3" v-for="component in hardware" style="padding-top: 40px;">
@@ -61,7 +61,8 @@ export default {
     data() {
       // The variable names used here are all from i18n lin locales
       return {
-        mirte: 'basic',
+        chose: this.$route.query.c,
+        mirte: this.$route.query.r,
         robots: {
           light: {'selected': ['l9110s', 'yellow_motor', 'breadboard', 'caster_wheel', 'wheel', 'breadboard_supply','power_bank','usb_cable','reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor'],
                   'disabled': ['single_board_computer', 'orange_pi_zero2', 'raspberry_pi', 'micro_controller', 'raspberry_pico', 'arduino_nano', 'arduino_uno', 'stm32', 'blue_motor', 'pcb', 'sd_card', 'servo', 'oled', 'us_distance_sensor', 'keypad', 'camera']},
