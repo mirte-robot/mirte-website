@@ -3,7 +3,7 @@
 
   <div class="container-fluid">
     <a class="navbar-brand" style="font-family: Livvic-Bold;" href="/"><h1>MIRTE</h1></a>
-    <button class="navbar-toggler" type="button" @click="visible=!visible" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+    <button class="navbar-toggler" type="button" @click="visible=!visible" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="navbar-collapse" :class="!visible?'collapse':''" id="navbarNavDropdown">
