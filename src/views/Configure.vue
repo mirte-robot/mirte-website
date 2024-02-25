@@ -64,12 +64,12 @@ export default {
         chose: this.$route.query.c,
         mirte: this.$route.query.r,
         robots: {
-          light: {'selected': ['l9110s', 'yellow_motor', 'breadboard', 'caster_wheel', 'wheel', 'breadboard_supply','power_bank','usb_cable','reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor'],
-                  'disabled': ['single_board_computer', 'orange_pi_zero2', 'raspberry_pi', 'micro_controller', 'raspberry_pico', 'arduino_nano', 'arduino_uno', 'stm32', 'blue_motor', 'pcb', 'sd_card', 'servo', 'oled', 'us_distance_sensor', 'keypad', 'camera']},
-          basic: {'selected': ['raspberry_pico', 'l9110s', 'yellow_motor', 'breadboard', 'caster_wheel', 'wheel', 'breadboard_supply','power_bank','usb_cable','reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor', 'us_distance_sensor', 'keypad'],
-                  'disabled': ['single_board_computer', 'orange_pi_zero2', 'raspberry_pi', 'arduino_nano', 'arduino_uno', 'stm32', 'blue_motor', 'sd_card', 'camera']},
-          pioneer: {'selected': ['orange_pi_zero2', 'raspberry_pico', 'l9110s', 'yellow_motor', 'pcb', 'sd_card', 'caster_wheel', 'wheel', 'power_bank','usb_cable', 'servo', 'oled', 'reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor', 'us_distance_sensor', 'keypad', 'camera'],
-                    'disabled': []}
+          light: {'selected': ['l9110s', 'yellow_motor', 'breadboard', 'caster_wheel', 'wheel', 'm3', 'frame_bottom', 'breadboard_supply','power_bank','usb_cable','reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor'],
+                  'disabled': ['single_board_computer', 'orange_pi_zero2', 'raspberry_pi', 'micro_controller', 'raspberry_pico', 'arduino_nano', 'arduino_uno', 'stm32', 'blue_motor', 'pcb', 'sd_card', 'actuators','servo', 'oled', 'us_distance_sensor', 'keypad', 'camera']},
+          basic: {'selected': ['raspberry_pico', 'l9110s', 'yellow_motor', 'breadboard', 'caster_wheel', 'wheel', 'm3', 'frame_bottom', 'breadboard_supply','power_bank','usb_cable','reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor', 'us_distance_sensor', 'keypad'],
+                  'disabled': ['single_board_computer', 'orange_pi_zero2', 'raspberry_pi', 'arduino_nano', 'arduino_uno', 'stm32', 'blue_motor', 'sd_card', 'actuators', 'servo', 'oled', 'camera']},
+          pioneer: {'selected': ['orange_pi_zero2', 'raspberry_pico', 'l9110s', 'yellow_motor', 'pcb', 'sd_card', 'caster_wheel', 'wheel', 'm3', 'frame_full', 'power_bank','usb_cable', 'servo', 'oled', 'reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor', 'us_distance_sensor', 'keypad', 'camera'],
+                    'disabled': ['frame_bottom']}
         },
         hardware: [
           {name: 'single_board_computer', options: ['orange_pi_zero2', 'raspberry_pi']},
@@ -77,10 +77,10 @@ export default {
           {name: 'motor_controller', options: ['l9110s', 'l298n', 'mx1919']},
           {name: 'wiring', options: ['breadboard', 'pcb']},
           {name: 'motors', options: ['yellow_motor', 'blue_motor']},
-          {name: 'misc', options: ['sd_card', 'caster_wheel', 'wheel']},
+          {name: 'misc', options: ['sd_card', 'caster_wheel', 'wheel', 'm3', 'frame_bottom', 'frame_full']},
           {name: 'power', options: ['power_bank', 'breadboard_supply', 'usb_cable']},
-          {name: 'actuators', options: ['servo', 'oled']},
           {name: 'sensors', options: ['reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor', 'us_distance_sensor', 'keypad', 'camera']},
+          {name: 'actuators', options: ['servo', 'oled']}
         ]
       }
     }

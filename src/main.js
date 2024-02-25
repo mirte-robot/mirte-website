@@ -9,8 +9,9 @@ import nl from "../locales/nl.json";
 import en from "../locales/en.json";
 
 // configure i18n
+const persistedLocale = localStorage.getItem("user-locale")
 const i18n = createI18n({
-  locale: "en",
+  locale: persistedLocale ? persistedLocale : "en",
   fallbackLocale: "en",
   messages: { nl, en },
 });

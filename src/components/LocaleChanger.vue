@@ -21,5 +21,12 @@ export default {
       ],
     };
   },
+  watch: {
+    '$i18n.locale': function(newVal, oldVal) {
+      localStorage.setItem("user-locale", newVal);
+    } 
+  }
+
+
 };
 </script>

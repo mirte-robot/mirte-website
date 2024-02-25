@@ -4,8 +4,8 @@
   <div class="row">
     <div class="col-md-3 col-xs-12 mb-1" style="padding-top: 50px;">
               <h3 style="text-align: center;">1</h3>
-              <h3 style="text-align: center;">{{ $t("start.download_base") }}</h3>
-              <p style="padding-top: 20px;">{{ $t("start.download_base_text") }} {{ mirte }}:</p>
+              <h3 style="text-align: center;">{{ $t("start.download_frame") }}</h3>
+              <p style="padding-top: 20px;">{{ $t("start.download_frame_text") }} {{ mirte }}:</p>
 
               <select v-if="level === 'higher'" class="form-select" v-model="base">
                 <option value="dxf">{{ $t("start.lasercut") }}</option>

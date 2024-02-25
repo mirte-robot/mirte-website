@@ -29,6 +29,9 @@
     "sd_card": "16GB SD Kaart",
     "caster_wheel": "Kogelwiel",
     "wheel": "Geel wiel",
+    "m3": "M3 boutjes en moertjes",
+    "frame_bottom": "Frame (onderkant)",
+    "frame_full": "Frame (volledig)",
     "power_bank": "5V Power Bank",
     "breadboard_supply": "Breadboard Power (MB102)",
     "usb_cable": "Micro USB kabel",
@@ -43,13 +46,13 @@
     "light": "Leer de basis over electronica en robot gedrag. Door twee sensoren aan de motoren te koppelen (met de motor controller) kan je een robot bouwen die reageert op deze sensoren. De robot zal naar het licht toe of van het licht af bewegen. Of juist obstakels vermijden.",
     "basic": "Leer over software (blokken en Python). Door een microcontroller toe te voegen kan je complexer gedrag maken en more sensoren gebruiken.",
     "pioneer": "Ontdek alle mogelijkheden van robotica. Door een computer toe te voegen kunnen nog meer sensoren gebruikt worden (camera en zelfs lidar) en een gripper. Naast programmeren in blokken en Python, kunnen nu alle mogelijkheden van Robot Operating System (ROS) benut worden.",
-    "start": "Aan de slag!"
+    "start": "Aan de slag met"
   },
   "start": {
     "coming_soon": "Coming soon",
     "construction": "Op dit moment leggen we de laatste hand aan dit deel van de robot.",
-    "download_base": "Download Base",
-    "download_base_text": "Selecteer de bestanden voor het frame van MIRTE",
+    "download_frame": "Download Frame",
+    "download_frame_text": "Selecteer de bestanden voor het frame van MIRTE",
     "lasercut": "DXF - lasersnijden 4mm multiplex",
     "dxf_source": "FreeCAD source bestanden",
     "get_hardware": "Hardware",
