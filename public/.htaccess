@@ -5,4 +5,8 @@
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
+
+  RedirectMatch 301 ^/docs/$ http://docs.mirte.org/
+  RedirectMatch 301 ^/workshops/$ http://workshops.mirte.org/
+
 </IfModule>
