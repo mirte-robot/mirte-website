@@ -71,6 +71,7 @@
     "download_frame": "Download Frame",
     "download_frame_text": "Select the files of the frame of MIRTE",
     "lasercut": "DXF - lasercut 4mm plywood",
+    "3dprint": "STL - 3D print",
     "dxf_source": "FreeCAD source files",
     "get_hardware": "Get Hardware",
     "get_hardware_text": "Select a Single Board Computer, Microcontroller, and check the other hardware you need in the",

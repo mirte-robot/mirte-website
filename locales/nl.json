@@ -54,6 +54,7 @@
     "download_frame": "Download Frame",
     "download_frame_text": "Selecteer de bestanden voor het frame van MIRTE",
     "lasercut": "DXF - lasersnijden 4mm multiplex",
+    "3dprint": "STL - 3D print",
     "dxf_source": "FreeCAD source bestanden",
     "get_hardware": "Hardware",
     "get_hardware_text": "Selecteer een Computer, Microcontroller, en bekijk de ander noodzakelijk hardware in de",

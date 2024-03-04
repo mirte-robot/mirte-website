@@ -9,6 +9,7 @@
 
               <select v-if="level === 'higher'" class="form-select" v-model="base">
                 <option value="dxf">{{ $t("start.lasercut") }}</option>
+                <option value="stl">{{ $t("start.3dprint") }}</option>
                 <option value="freecad">{{ $t("start.dxf_source") }}</option>
               </select>
  
@@ -94,7 +95,9 @@ export default {
       },
       getUrlDXF() {
          if (this.base == "dxf"){
-            return "https://github.com/mirte-robot/mirte-frame/releases/latest" 
+            return "https://github.com/mirte-robot/mirte-frame/releases/download/0.1.0/dxfs.zip" 
+         } else if (this.base == "stl"){
+            return "https://github.com/mirte-robot/mirte-frame/releases/download/0.1.0/stls.zip"
          } else if (this.base == "freecad"){
             return "https://github.com/mirte-robot/mirte-frame/releases/latest"
          }
