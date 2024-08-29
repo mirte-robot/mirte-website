@@ -1,63 +1,138 @@
 <template>
 
-<div v-if="level !== 'primary'" class="container d-flex align-items-center">
-  <div class="row">
-    <div class="col-md-3 col-xs-12 mb-1" style="padding-top: 50px;">
-              <h3 style="text-align: center;">1</h3>
-              <h3 style="text-align: center;">{{ $t("start.download_frame") }}</h3>
-              <p style="padding-top: 20px;">{{ $t("start.download_frame_text") }} {{ mirte }}:</p>
+<div v-if="mirte == null && level !== 'higher'" class="container d-flex align-items-center">
 
-              <select v-if="level === 'higher'" class="form-select" v-model="base">
-                <option value="dxf">{{ $t("start.lasercut") }}</option>
-                <option value="stl">{{ $t("start.3dprint") }}</option>
-                <option value="freecad">{{ $t("start.dxf_source") }}</option>
-              </select>
- 
-              <div style="text-align: center; margin-top: 20px;">   
-              <a class="btn btn-primary my-button" :href="getUrlDXF()" >{{ $t("start.download") }}</a>
-              </div>
-    </div>
+   <div v-if="level === 'primary'" class="row w-100" style="text-align: center;" >
+      <h3>{{ $t("start.select_robot") }}</h3>
+      <div>{{ $t("start.select_robot_primary_text") }}</div>
+
+      <div class="col-md-6 col-xs-12 mb-1" style="padding-top: 50px;">
+        <div class="d-flex flex-column h-100" style="text-align: center;">
+          <div>
+            <h5>MIRTE light</h5>
+            <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.light") }}</p>
+            <router-link to="start?l=secondary&r=light"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> light!</button></router-link>
+          </div>
+          <img src="@/assets/images/light_render.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE basic">
+        </div>
+      </div>
+
+      <div class="col-md-6 col-xs-12 mb-1" style="padding-top: 50px;">
+        <div class="d-flex flex-column h-100" style="text-align: center;">
+          <div>
+            <h5>MIRTE basic</h5>
+            <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.basic") }}</p>
+            <router-link to="start?l=secondary&r=basic"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> basic!</button></router-link>
+          </div>
+          <img src="@/assets/images/basic_render.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE pioneer">
+        </div>
+      </div>
+   </div>
 
 
-    <div class="col-md-3 col-xs-12 mb-1"  style="padding-top: 50px;">
-              <h3 style="text-align: center;">2</h3>
-              <h3 style="text-align: center;">{{ $t("start.get_hardware") }}</h3>
-              <p v-if="level === 'secondary'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <router-link :to="'/configure?r=' + mirte">bill of materials</router-link>.</p>
-              <p v-if="level === 'higher'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <router-link :to="'/configure?r=' + mirte + '&c=true'">bill of materials</router-link>.</p>
-    </div>
+   <div v-if="level === 'secondary'" class="row w-100" style="text-align: center;" >
+      <h3>{{ $t("start.select_robot") }}</h3>
+      <div>{{ $t("start.select_robot_secondary_text") }} </div>
+    
+      <div class="col-md-6 col-xs-12 mb-1" style="padding-top: 50px;">
+        <div class="d-flex flex-column h-100" style="text-align: center;">
+          <div>
+            <h5>MIRTE basic</h5>
+            <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.basic") }}</p>
+            <router-link to="start?l=secondary&r=basic"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> basic!</button></router-link>
+          </div>
+          <img src="@/assets/images/basic_render.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE basic">
+        </div>
+      </div>
 
+      <div class="col-md-6 col-xs-12 mb-1" style="padding-top: 50px;">
+        <div class="d-flex flex-column h-100" style="text-align: center;">
+          <div>
+            <h5>MIRTE pioneer</h5>
+            <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.pioneer") }}</p>
+            <router-link to="start?l=secondary&r=pioneer"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> pioneer!</button></router-link>
+          </div>
+          <img src="@/assets/images/pioneer_render.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE pioneer">
+        </div>
+      </div>
+   </div>
 
-    <div class="col-md-3 col-xs-12 mb-1"  style="padding-top: 50px;">
-              <h3 style="text-align: center;">3</h3>
-              <h3 style="text-align: center;">{{ $t("start.download_software") }}</h3>
-              <p style="padding-top: 20px;">{{ $t("start.download_software_text") }}:</p>
-
-              <select v-if="level === 'higher'" class="form-select" v-model="software">
-                <option value="orange_pi_zero2" selected>Orange Pi Zero 2</option>
-                <option value="raspberry_pi">Raspberry Pi 2/3/4</option>
-                <option value="latest_release">{{ $t("start.software_source_release") }}</option>
-                <option value="main">{{ $t("start.software_source_latest") }}</option>
-              </select>
-
-              <div style="text-align: center; margin-top: 20px;">
-              <a class="btn btn-primary my-button" :href="getUrl()">{{ $t("start.download") }}</a>
-              </div>
-    </div>
-
-    <div class="col-md-3 col-xs-12 mb-1"  style="padding-top: 50px;">
-              <h3 style="text-align: center;">4</h3>
-              <h3 style="text-align: center;">{{ $t("start.build_and_learn") }}</h3>
-              <p v-if="level === 'secondary'" style="padding-top: 20px;">{{ $t("start.build_and_learn_text") }} <a href="https://workshops.mirte.org/">{{ $t("start.workshops") }}</a>.</p>
-              <p v-if="level === 'higher'" style="padding-top: 20px;">{{ $t("start.build_and_learn_text") }} <a href="https://docs.mirte.org/">{{ $t("start.documentation") }}</a>.</p>
-    </div>
-  </div>
 </div>
 
-  <div style="text-align: center;" v-else>
-     <h1>{{ $t("start.coming_soon") }}</h1>
-     <p>{{ $t("start.construction") }}</p>
-  </div>
 
+
+<div v-else class="container d-flex align-items-center">
+  <div class="row" style="text-align: center;">
+  <h3 v-if="level !== 'higher'">{{ $t("start.getting_started_with") }} MIRTE {{ mirte }}</h3>
+  <h3 v-else>{{ $t("start.customize") }} MIRTE pioneer</h3>
+
+    <div class="col-md-3 col-xs-12 mb-1" style="padding-top: 50px;">
+      <h3 style="text-align: center;">1</h3>
+      <h3 style="text-align: center;">{{ $t("start.download_frame") }}</h3>
+
+      <p style="padding-top: 20px;" v-if="level != 'higher'">{{ $t("start.download_frame_text") }} {{ mirte }}:</p>
+      <p style="padding-top: 20px;" v-if="level == 'higher'">{{ $t("start.select_frame_text") }} {{ mirte }}:</p>
+
+      <select v-if="level === 'higher'" class="form-select" v-model="base">
+        <option value="dxf">{{ $t("start.lasercut") }}</option>
+        <option value="stl">{{ $t("start.3dprint") }}</option>
+        <option value="freecad">{{ $t("start.dxf_source") }}</option>
+      </select>
+
+      <div style="text-align: center; margin-top: 20px;">
+        <a class="btn btn-primary my-button" :href="getUrlDXF()" >{{ $t("start.download") }}</a>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 col-xs-12 mb-1"  style="padding-top: 50px;">
+       <h3 style="text-align: center;">2</h3>
+       <h3 style="text-align: center;">{{ $t("start.get_hardware") }}</h3>
+ 
+       <p v-if="level !== 'higher' && mirte == 'light'" style="padding-top: 20px;">{{ $t("start.get_hardware_light_text") }} <router-link :to="'/configure?r=' + mirte">bill of materials</router-link>.</p>
+       <p v-if="level !== 'higher' && mirte == 'basic'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <router-link :to="'/configure?r=' + mirte">bill of materials</router-link>.</p>
+       <p v-if="level !== 'higher' && mirte == 'pioneer'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <router-link :to="'/configure?r=' + mirte">bill of materials</router-link>.</p>
+       <p v-if="level === 'higher'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <router-link :to="'/configure?r=' + mirte + '&c=true'">bill of materials</router-link>.</p>
+    </div>
+
+
+
+    <div class="col-md-3 col-xs-12 mb-1"  style="padding-top: 50px;">
+      <h3 style="text-align: center;">3</h3>
+      <h3 v-if="mirte !== 'pioneer'" style="text-align: center;">{{ $t("start.build") }}</h3>
+      <h3 v-else style="text-align: center;">{{ $t("start.download_software") }}</h3>
+
+      <p v-if="level == 'higher'" style="padding-top: 20px;">{{ $t("start.select_software_text") }}:</p>
+      <p v-if="mirte === 'pioneer' && (level === 'secondary' || level == null)" style="padding-top: 20px;">{{ $t("start.download_software_text") }}:</p>
+      <p v-if="mirte === 'basic'" style="padding-top: 20px;">{{ $t("start.build_robot") }} <a href="https://surfdrive.surf.nl/files/index.php/s/KbmrAsejGg9qO6G?path=%2Fmirte_basic#/files_mediaviewer/0_step0.png">here</a></p>
+      <p v-if="mirte === 'light'" style="padding-top: 20px;">{{ $t("start.build_robot") }} <a href="https://surfdrive.surf.nl/files/index.php/s/KbmrAsejGg9qO6G?path=%2Fmirte_lite#/files_mediaviewer/0_step0.png">here</a></p>
+
+      <select v-if="level === 'higher'" class="form-select" v-model="software">
+        <option value="orange_pi_zero2" selected>Orange Pi Zero 2</option>
+        <option value="raspberry_pi">Raspberry Pi 2/3/4</option>
+        <option value="latest_release">{{ $t("start.software_source_release") }}</option>
+        <option value="main">{{ $t("start.software_source_latest") }}</option>
+      </select>
+
+      <div v-if="mirte === 'pioneer' || level === 'higher'" style="text-align: center; margin-top: 20px;">
+        <a class="btn btn-primary my-button" :href="getUrl()">{{ $t("start.download") }}</a>
+      </div>
+    </div>
+
+
+    <div v-if="mirte !== 'light'" class="col-md-3 col-xs-12 mb-1"  style="padding-top: 50px;">
+       <h3 style="text-align: center;">4</h3>
+       <h3 v-if="mirte === 'pioneer' || level === 'higher'" style="text-align: center;">{{ $t("start.build_and_learn") }}</h3>
+       <h3 v-if="mirte === 'basic'" style="text-align: center;">{{ $t("start.program_ide") }}</h3>       
+
+       <p v-if="mirte === 'basic'" style="padding-top: 20px;">{{ $t("start.program_ide_text") }} <a href="https://mirte.org/ide/">web IDE</a>.</p>
+       <p v-if="mirte === 'pioneer' && (level === 'secondary' || level == null)" style="padding-top: 20px;">{{ $t("start.build_and_learn_text") }} <a href="https://workshops.mirte.org/">{{ $t("start.workshops") }}</a>.</p>
+       <p v-if="level === 'higher'" style="padding-top: 20px;">{{ $t("start.build_and_learn_text") }} <a href="https://docs.mirte.org/">{{ $t("start.documentation") }}</a>.</p>
+    </div>
+
+
+  </div>
+</div>
 
 
 
@@ -75,7 +150,7 @@ export default {
     data() {
       return {
         level: this.$route.query.l,
-        mirte: 'pioneer',
+        mirte: this.$route.query.r,
         software: 'orange_pi_zero2',
         base: 'dxf'
       }

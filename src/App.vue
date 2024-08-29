@@ -11,7 +11,7 @@
   </main>
 
   <footer style="padding: 10px; text-align: center; background-color: white;">
-     <span class="mirte">MIRTE</span> {{ $t("footer") }} <a href="https://tudelftroboticsinstitute.nl/">TU Delft Robotics Institute</a>.
+     <span class="mirte">MIRTE</span> {{ $t("footer") }} TU Delft. info@mirte.org.
      <div class="position-fixed bottom-0 end-0 mb-2 me-2">
         <LocaleChanger/>
      </div>
