@@ -70,8 +70,8 @@
       <h3 style="text-align: center;">1</h3>
       <h3 style="text-align: center;">{{ $t("start.download_frame") }}</h3>
 
-      <p style="padding-top: 20px;" v-if="level != 'higher'">{{ $t("start.download_frame_text") }} {{ mirte }}:</p>
-      <p style="padding-top: 20px;" v-if="level == 'higher'">{{ $t("start.select_frame_text") }} {{ mirte }}:</p>
+      <p style="padding-top: 20px;" v-if="level != 'higher'">{{ $t("start.download_frame_text") }}:</p>
+      <p style="padding-top: 20px;" v-if="level == 'higher'">{{ $t("start.select_frame_text") }}:</p>
 
       <select v-if="level === 'higher'" class="form-select" v-model="base">
         <option value="dxf">{{ $t("start.lasercut") }}</option>
