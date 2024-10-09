@@ -159,9 +159,9 @@ export default {
       // TODO: get latest, rather than hardcoded
       getUrl() {
          if (this.software == "orange_pi_zero2"){
-            return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/download/0.1/mirte_orangepizero2_2024-01-31_16_53_36.img.xz";
+            return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/download/0.1.1/mirte_orangepizero2_2024-10-09_10_25_37.img.xz";
          } else if (this.software == "raspberry_pi"){
-            return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/download/0.1/mirte_rpi4b_2024-01-31_17_22_56.img.xz";
+            return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/download/0.1.1/mirte_rpi4b_2024-10-09_10_59_38.img.xz";
          } else if (this.software == "latest_release"){
             return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/latest";
          } else if (this.software == "latest_release"){
