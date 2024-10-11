@@ -35,7 +35,7 @@
             <router-link to="start?l=secondary" class="nav-link" @click="visible=!visible">{{ $t("navbar.secondary") }}</router-link>
             <router-link to="start?l=higher" class="nav-link" @click="visible=!visible">{{ $t("navbar.higher") }}</router-link>
             <div class="dropdown-divider"></div>
-            <a href="https://workshops.mirte.org/" class="nav-link">{{ $t("navbar.workshops") }}</a>
+            <a :href="'https://workshops.mirte.org/' + $i18n.locale" class="nav-link">{{ $t("navbar.workshops") }}</a>
             <a href="https://docs.mirte.org/" class="nav-link">{{ $t("navbar.docs") }}</a>
           </ul>
         </li>

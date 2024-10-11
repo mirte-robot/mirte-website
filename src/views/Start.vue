@@ -126,7 +126,7 @@
        <h3 v-if="mirte === 'basic'" style="text-align: center;">{{ $t("start.program_ide") }}</h3>       
 
        <p v-if="mirte === 'basic'" style="padding-top: 20px;">{{ $t("start.program_ide_text") }} <a href="https://mirte.org/ide/">web IDE</a>.</p>
-       <p v-if="mirte === 'pioneer' && (level === 'secondary' || level == null)" style="padding-top: 20px;">{{ $t("start.build_and_learn_text") }} <a href="https://workshops.mirte.org/">{{ $t("start.workshops") }}</a>.</p>
+       <p v-if="mirte === 'pioneer' && (level === 'secondary' || level == null)" style="padding-top: 20px;">{{ $t("start.build_and_learn_text") }} <a :href="'https://workshops.mirte.org/' + $i18n.locale">{{ $t("start.workshops") }}</a>.</p>
        <p v-if="level === 'higher'" style="padding-top: 20px;">{{ $t("start.build_and_learn_text") }} <a href="https://docs.mirte.org/">{{ $t("start.documentation") }}</a>.</p>
     </div>
 
