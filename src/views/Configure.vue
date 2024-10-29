@@ -30,13 +30,13 @@
     <h1 v-else style="text-align: center;padding-top: 20px;">MIRTE {{ mirte }}</h1>
 
     <div class="row">
-      <div class="col-sm-3" v-for="component in hardware" style="padding-top: 40px;">
+      <div class="col-sm-3" v-for="(component, index_component) in hardware" style="padding-top: 40px;">
         <div :style="robots[mirte]['disabled'].includes(component.name) ? 'color: #ccc;' : ''">
         {{ $t("configure." + component.name) }}
         </div>
-        <div v-for="option in component.options" style="font-family:'Overpass-Light'; padding-top: 7px;">
-          <input style="accent-color: #9db7be;" type="checkbox" value="" id="flexCheckDefault" :checked="robots[mirte]['selected'].includes(option)" :disabled="robots[mirte]['disabled'].includes(option)">
-          <label class="form-check-label" for="flexCheckDefault">
+        <div v-for="(option, index_option) in component.options" style="font-family:'Overpass-Light'; padding-top: 7px;">
+          <input style="accent-color: #9db7be;" type="checkbox" value="" :id="'checkbox_' + index_component + '_' + index_option" :checked="robots[mirte]['selected'].includes(option)" :disabled="robots[mirte]['disabled'].includes(option)">
+          <label class="form-check-label" :for="'checkbox_' + index_component + '_' + index_option">
             {{ $t("configure." + option) }}
           </label>
           </div>
