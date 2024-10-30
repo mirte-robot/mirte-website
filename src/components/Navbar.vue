@@ -12,9 +12,9 @@
           <router-link :to="{name: 'home'}" class="nav-link" @click="visible=!visible">{{ $t("navbar.home") }}</router-link>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/robots" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{ $t("navbar.robots") }}
-          </a>
+          </div>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
             <router-link :to="{name: 'robots', params: { robot: 'light' }}" class="nav-link" @click="visible=!visible"><span class="mirte">MIRTE</span> Light</router-link>
             <router-link :to="{name: 'robots', params: { robot: 'basic' }}" class="nav-link" @click="visible=!visible"><span class="mirte">MIRTE</span> Basic</router-link>
@@ -24,9 +24,9 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/start" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="nav-link dropdown-toggle" href="/start" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{ $t("navbar.start") }}
-          </a>
+          </div>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
             <router-link :to="{name: 'start', params: { level: 'primary' }}" class="nav-link" @click="visible=!visible">{{ $t("navbar.primary") }}</router-link>
             <router-link :to="{name: 'start', params: { level: 'secondary' }}" class="nav-link" @click="visible=!visible">{{ $t("navbar.secondary") }}</router-link>
@@ -37,9 +37,9 @@
           </ul>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/contribute" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="nav-link dropdown-toggle" href="/contribute" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{ $t("navbar.contribute") }}
-          </a>
+          </div>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
              <a class="nav-link" href="https://github.com/mirte-robot">Github</a>
           </ul>
