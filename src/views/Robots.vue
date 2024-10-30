@@ -5,7 +5,7 @@
 
 <div id="carouselExampleDark" class="carousel carousel-dark slide d-flex flex-row h-100" data-bs-interval="false" data-bs-wrap="false">
 
-   <div class="carousel-item" :class="this.$route.query.r == 'light' ? 'active' : ''">
+   <div class="carousel-item" :class="robot == 'light' ? 'active' : ''">
      <div class="d-flex flex-column h-100" style="text-align: center;">
         <div style="flex-grow: 1;" class="img-wrap">
            <img src="@/assets/images/light_render.png" alt="MIRTE light">
@@ -13,12 +13,12 @@
         <div>
           <h5>MIRTE light</h5>
           <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.light") }}</p>
-          <router-link to="start?r=light"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> light!</button></router-link>          
+          <router-link :to="{name: 'start', params: { robot: 'light' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> light!</button></router-link>          
         </div>
      </div>
    </div>
 
-   <div class="carousel-item" :class="this.$route.query.r == 'basic' ? 'active' : ''">
+   <div class="carousel-item" :class="robot == 'basic' ? 'active' : ''">
      <div class="d-flex flex-column h-100" style="text-align: center;">
         <div style="flex-grow: 1;" class="img-wrap">
            <img src="@/assets/images/basic_render.png" alt="MIRTE basic">
@@ -26,13 +26,13 @@
         <div>
           <h5>MIRTE basic</h5>
           <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.basic") }}</p>
-          <router-link to="start?r=basic"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> basic!</button></router-link>
+          <router-link :to="{name: 'start', params: { robot: 'basic' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> basic!</button></router-link>
         </div>
 
      </div>
    </div>
 
-   <div class="carousel-item" :class="this.$route.query.r == 'pioneer' ? 'active' : ''">
+   <div class="carousel-item" :class="robot == 'pioneer' ? 'active' : ''">
      <div class="d-flex flex-column h-100" style="text-align: center;">
         <div style="flex-grow: 1;" class="img-wrap">
            <img src="@/assets/images/pioneer_render.png" alt="MIRTE pioneer">
@@ -40,7 +40,7 @@
         <div>
           <h5>MIRTE pioneer</h5>
           <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.pioneer") }}</p>
-          <router-link to="start?r=pioneer"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> pioneer!</button></router-link>
+          <router-link :to="{name: 'start', params: { robot: 'pioneer' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> pioneer!</button></router-link>
         </div>
 
      </div>
@@ -74,7 +74,7 @@
   <div style="flex: 1;">
   
 
-   <div class="carousel-item" :class="this.$route.query.r == 'light' ? 'active' : ''">
+   <div class="carousel-item" :class="robot == 'light' ? 'active' : ''">
       <div style="height: 60vh; background-color: green;">
       <div style="margin: auto; text-align: center;">
         <img src="@/assets/images/light_render.png" class="d-block" alt="Mirte Light" style="margin: auto; width: 70%;">
@@ -83,14 +83,14 @@
 
       </div>
     </div>
-    <div class="carousel-item" :class="this.$route.query.r == 'basic' ? 'active' : ''">
+    <div class="carousel-item" :class="robot == 'basic' ? 'active' : ''">
       <img src="@/assets/images/basic_render.png" class="d-block" alt="Mirte Basic" style="margin: auto; width: 40vw;">
       <div class="carousel-caption">
         <h5><span class="mirte">MIRTE</span> basic</h5>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
-    <div class="carousel-item" :class="this.$route.query.r == 'pioneer' ? 'active' : ''">
+    <div class="carousel-item" :class="robot == 'pioneer' ? 'active' : ''">
       <img src="@/assets/images/pioneer_render.png" class="d-block" alt="Mirte Pioneer" style="margin: auto; width: 40vw;">
       <div class="carousel-caption">
         <h5><span class="mirte">MIRTE</span> pioneer</h5>
@@ -119,12 +119,7 @@
 
 
 export default {
-
-    data() {
-      return {
-        mirte: 'basic',
-      }
-    }
+    props: ['robot']
 }
 
 

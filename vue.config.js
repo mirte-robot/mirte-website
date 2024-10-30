@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   pluginOptions: {
     i18n: {
@@ -9,5 +7,7 @@ module.exports = {
       enableInSFC: true
     }
   },
-  publicPath: './',
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/mirte-website/'
+    : '/'
 }

@@ -2,23 +2,23 @@
 
 <div>
   <div class="container">
-    <div v-if="chose" class="row">
-      <div class="col-4" @click="mirte='light'" style="text-align: center;">
-        <button :style="mirte == 'light' ? 'background-color: #f1be45;': ''">
+    <div v-if="selectable" class="row">
+      <div class="col-4" @click="robot='light'" style="text-align: center;">
+        <button :style="robot == 'light' ? 'background-color: #f1be45;': ''">
          <div style="padding: 10px;">
          <img src="@/assets/images/light_render.png" style="max-height:50px;"/><span class="mirte">MIRTE</span> light
          </div>
         </button> 
       </div>
-      <div class="col-4" @click="mirte='basic'" style="text-align: center;">
-        <button :style="mirte == 'basic' ? 'background-color: #f1be45;': ''">
+      <div class="col-4" @click="robot='basic'" style="text-align: center;">
+        <button :style="robot == 'basic' ? 'background-color: #f1be45;': ''">
          <div style="padding: 10px;">
          <img src="@/assets/images/basic_render.png" style="max-height:50px;"/><span class="mirte">MIRTE</span> basic
          </div>
         </button>
       </div>
-      <div class="col-4" @click="mirte='pioneer'" style="text-align: center;">
-        <button :style="mirte == 'pioneer' ? 'background-color: #f1be45;': ''">
+      <div class="col-4" @click="robot='pioneer'" style="text-align: center;">
+        <button :style="robot == 'pioneer' ? 'background-color: #f1be45;': ''">
          <div style="padding: 10px;">
          <img src="@/assets/images/pioneer_render.png" style="max-height:50px;"/><span class="mirte">MIRTE</span> pioneer
          </div>
@@ -26,16 +26,16 @@
       </div>
     </div>
 
-    <h1 v-if="chose" style="text-align: center;padding-top: 20px;">{{ $t("configure.chose") }}</h1>
-    <h1 v-else style="text-align: center;padding-top: 20px;">MIRTE {{ mirte }}</h1>
+    <h1 v-if="selectable" style="text-align: center;padding-top: 20px;">{{ $t("configure.chose") }}</h1>
+    <h1 v-else style="text-align: center;padding-top: 20px;">MIRTE {{ robot }}</h1>
 
     <div class="row">
       <div class="col-sm-3" v-for="(component, index_component) in hardware" style="padding-top: 40px;">
-        <div :style="robots[mirte]['disabled'].includes(component.name) ? 'color: #ccc;' : ''">
+        <div :style="robots[robot]['disabled'].includes(component.name) ? 'color: #ccc;' : ''">
         {{ $t("configure." + component.name) }}
         </div>
         <div v-for="(option, index_option) in component.options" style="font-family:'Overpass-Light'; padding-top: 7px;">
-          <input style="accent-color: #9db7be;" type="checkbox" value="" :id="'checkbox_' + index_component + '_' + index_option" :checked="robots[mirte]['selected'].includes(option)" :disabled="robots[mirte]['disabled'].includes(option)">
+          <input style="accent-color: #9db7be;" type="checkbox" value="" :id="'checkbox_' + index_component + '_' + index_option" :checked="robots[robot]['selected'].includes(option)" :disabled="robots[robot]['disabled'].includes(option)">
           <label class="form-check-label" :for="'checkbox_' + index_component + '_' + index_option">
             {{ $t("configure." + option) }}
           </label>
@@ -57,12 +57,10 @@
 //import { reactive, computed } from "vue";
 
 export default {
-
+    props: ['robot', 'selectable'],
     data() {
       // The variable names used here are all from i18n lin locales
       return {
-        chose: this.$route.query.c,
-        mirte: this.$route.query.r,
         robots: {
           light: {'selected': ['l9110s', 'yellow_motor', 'breadboard', 'caster_wheel', 'wheel', 'm3', 'frame_bottom', 'breadboard_supply','power_bank','usb_cable','reflectance_sensor', 'light_sensor', 'ir_obstacle_sensor'],
                   'disabled': ['single_board_computer', 'orange_pi_zero2', 'raspberry_pi', 'micro_controller', 'raspberry_pico', 'arduino_nano', 'arduino_uno', 'stm32', 'blue_motor', 'pcb', 'sd_card', 'actuators','servo', 'oled', 'us_distance_sensor', 'keypad', 'camera']},

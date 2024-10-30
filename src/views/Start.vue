@@ -1,6 +1,6 @@
 <template>
 
-<div v-if="mirte == null && level !== 'higher'" class="container d-flex align-items-center">
+<div v-if="robot == null && level !== 'higher'" class="container d-flex align-items-center">
 
    <div v-if="level === 'primary'" class="row w-100" style="text-align: center;" >
       <h3>{{ $t("start.select_robot") }}</h3>
@@ -11,7 +11,7 @@
           <div>
             <h5>MIRTE light</h5>
             <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.light") }}</p>
-            <router-link to="start?l=secondary&r=light"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> light!</button></router-link>
+            <router-link :to="{name: 'start', params: { level: 'secondary', robot: 'light' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> light!</button></router-link>
           </div>
           <img src="@/assets/images/light_render.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE basic">
         </div>
@@ -22,7 +22,7 @@
           <div>
             <h5>MIRTE basic</h5>
             <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.basic") }}</p>
-            <router-link to="start?l=secondary&r=basic"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> basic!</button></router-link>
+            <router-link :to="{name: 'start', params: { level: 'secondary', robot: 'basic' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> basic!</button></router-link>
           </div>
           <img src="@/assets/images/basic_render.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE pioneer">
         </div>
@@ -39,7 +39,7 @@
           <div>
             <h5>MIRTE basic</h5>
             <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.basic") }}</p>
-            <router-link to="start?l=secondary&r=basic"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> basic!</button></router-link>
+            <router-link :to="{name: 'start', params: { level: 'secondary', robot: 'basic' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> basic!</button></router-link>
           </div>
           <img src="@/assets/images/basic_render.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE basic">
         </div>
@@ -50,7 +50,7 @@
           <div>
             <h5>MIRTE pioneer</h5>
             <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.pioneer") }}</p>
-            <router-link to="start?l=secondary&r=pioneer"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> pioneer!</button></router-link>
+            <router-link :to="{name: 'start', params: { level: 'secondary', robot: 'pioneer' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> pioneer!</button></router-link>
           </div>
           <img src="@/assets/images/pioneer_render.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE pioneer">
         </div>
@@ -63,7 +63,7 @@
 
 <div v-else class="container d-flex align-items-center">
   <div class="row" style="text-align: center;">
-  <h3 v-if="level !== 'higher'">{{ $t("start.getting_started_with") }} MIRTE {{ mirte }}</h3>
+  <h3 v-if="level !== 'higher'">{{ $t("start.getting_started_with") }} MIRTE {{ robot }}</h3>
   <h3 v-else>{{ $t("start.customize") }} MIRTE pioneer</h3>
 
     <div class="col-md-3 col-xs-12 mb-1" style="padding-top: 50px;">
@@ -89,23 +89,23 @@
        <h3 style="text-align: center;">2</h3>
        <h3 style="text-align: center;">{{ $t("start.get_hardware") }}</h3>
  
-       <p v-if="level !== 'higher' && mirte == 'light'" style="padding-top: 20px;">{{ $t("start.get_hardware_light_text") }} <router-link :to="'/configure?r=' + mirte">bill of materials</router-link>.</p>
-       <p v-if="level !== 'higher' && mirte == 'basic'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <router-link :to="'/configure?r=' + mirte">bill of materials</router-link>.</p>
-       <p v-if="level !== 'higher' && mirte == 'pioneer'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <router-link :to="'/configure?r=' + mirte">bill of materials</router-link>.</p>
-       <p v-if="level === 'higher'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <router-link :to="'/configure?r=' + mirte + '&c=true'">bill of materials</router-link>.</p>
+       <p v-if="level !== 'higher' && robot == 'light'" style="padding-top: 20px;">{{ $t("start.get_hardware_light_text") }} <router-link :to="{name: 'configure', params: { robot: robot }}">bill of materials</router-link>.</p>
+       <p v-if="level !== 'higher' && robot == 'basic'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <router-link :to="{name: 'configure', params: { robot: robot }}">bill of materials</router-link>.</p>
+       <p v-if="level !== 'higher' && robot == 'pioneer'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <router-link :to="{name: 'configure', params: { robot: robot }}">bill of materials</router-link>.</p>
+       <p v-if="level === 'higher'" style="padding-top: 20px;">{{ $t("start.get_hardware_text") }} <router-link :to="{name: 'configure', params: { robot: 'pioneer', selectable: true }}">bill of materials</router-link>.</p>
     </div>
 
 
 
     <div class="col-md-3 col-xs-12 mb-1"  style="padding-top: 50px;">
       <h3 style="text-align: center;">3</h3>
-      <h3 v-if="mirte !== 'pioneer'" style="text-align: center;">{{ $t("start.build") }}</h3>
+      <h3 v-if="robot !== 'pioneer'" style="text-align: center;">{{ $t("start.build") }}</h3>
       <h3 v-else style="text-align: center;">{{ $t("start.download_software") }}</h3>
 
       <p v-if="level == 'higher'" style="padding-top: 20px;">{{ $t("start.select_software_text") }}:</p>
-      <p v-if="mirte === 'pioneer' && (level === 'secondary' || level == null)" style="padding-top: 20px;">{{ $t("start.download_software_text") }}:</p>
-      <p v-if="mirte === 'basic'" style="padding-top: 20px;">{{ $t("start.build_robot") }} <a href="https://surfdrive.surf.nl/files/index.php/s/KbmrAsejGg9qO6G?path=%2Fmirte_basic#/files_mediaviewer/0_step0.png">here</a></p>
-      <p v-if="mirte === 'light'" style="padding-top: 20px;">{{ $t("start.build_robot") }} <a href="https://surfdrive.surf.nl/files/index.php/s/KbmrAsejGg9qO6G?path=%2Fmirte_lite#/files_mediaviewer/0_step0.png">here</a></p>
+      <p v-if="robot === 'pioneer' && (level === 'secondary' || level == null)" style="padding-top: 20px;">{{ $t("start.download_software_text") }}:</p>
+      <p v-if="robot === 'basic'" style="padding-top: 20px;">{{ $t("start.build_robot") }} <a href="https://surfdrive.surf.nl/files/index.php/s/KbmrAsejGg9qO6G?path=%2Fmirte_basic#/files_mediaviewer/0_step0.png">here</a></p>
+      <p v-if="robot === 'light'" style="padding-top: 20px;">{{ $t("start.build_robot") }} <a href="https://surfdrive.surf.nl/files/index.php/s/KbmrAsejGg9qO6G?path=%2Fmirte_lite#/files_mediaviewer/0_step0.png">here</a></p>
 
       <select v-if="level === 'higher'" class="form-select" v-model="software">
         <option value="orange_pi_zero2" selected>Orange Pi Zero 2</option>
@@ -114,19 +114,19 @@
         <option value="main">{{ $t("start.software_source_latest") }}</option>
       </select>
 
-      <div v-if="mirte === 'pioneer' || level === 'higher'" style="text-align: center; margin-top: 20px;">
+      <div v-if="robot === 'pioneer' || level === 'higher'" style="text-align: center; margin-top: 20px;">
         <a class="btn btn-primary my-button" :href="getUrl()">{{ $t("start.download") }}</a>
       </div>
     </div>
 
 
-    <div v-if="mirte !== 'light'" class="col-md-3 col-xs-12 mb-1"  style="padding-top: 50px;">
+    <div v-if="robot !== 'light'" class="col-md-3 col-xs-12 mb-1"  style="padding-top: 50px;">
        <h3 style="text-align: center;">4</h3>
-       <h3 v-if="mirte === 'pioneer' || level === 'higher'" style="text-align: center;">{{ $t("start.build_and_learn") }}</h3>
-       <h3 v-if="mirte === 'basic'" style="text-align: center;">{{ $t("start.program_ide") }}</h3>       
+       <h3 v-if="robot === 'pioneer' || level === 'higher'" style="text-align: center;">{{ $t("start.build_and_learn") }}</h3>
+       <h3 v-if="robot === 'basic'" style="text-align: center;">{{ $t("start.program_ide") }}</h3>       
 
-       <p v-if="mirte === 'basic'" style="padding-top: 20px;">{{ $t("start.program_ide_text") }} <a href="https://mirte.org/ide/">web IDE</a>.</p>
-       <p v-if="mirte === 'pioneer' && (level === 'secondary' || level == null)" style="padding-top: 20px;">{{ $t("start.build_and_learn_text") }} <a :href="'https://workshops.mirte.org/' + $i18n.locale">{{ $t("start.workshops") }}</a>.</p>
+       <p v-if="robot === 'basic'" style="padding-top: 20px;">{{ $t("start.program_ide_text") }} <a href="https://mirte.org/ide/">web IDE</a>.</p>
+       <p v-if="robot === 'pioneer' && (level === 'secondary' || level == null)" style="padding-top: 20px;">{{ $t("start.build_and_learn_text") }} <a :href="'https://workshops.mirte.org/' + $i18n.locale">{{ $t("start.workshops") }}</a>.</p>
        <p v-if="level === 'higher'" style="padding-top: 20px;">{{ $t("start.build_and_learn_text") }} <a href="https://docs.mirte.org/">{{ $t("start.documentation") }}</a>.</p>
     </div>
 
@@ -147,10 +147,9 @@
 
 
 export default {
+    props: ['level', 'robot'],
     data() {
       return {
-        level: this.$route.query.l,
-        mirte: this.$route.query.r,
         software: 'orange_pi_zero2',
         base: 'dxf'
       }
@@ -178,13 +177,6 @@ export default {
          }
       }
     },
-    watch: {
-      '$route.params': {
-        handler(newValue) {
-           this.$router.go()
-        },
-      }
-    }
 }
 
 
