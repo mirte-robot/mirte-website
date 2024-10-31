@@ -7,7 +7,5 @@ module.exports = {
       enableInSFC: true
     }
   },
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/mirte-website/'
-    : '/'
+  publicPath: './'
 }

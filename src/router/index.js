@@ -1,5 +1,4 @@
 import { createWebHistory, createRouter } from "vue-router";
-import { publicPath } from '../../vue.config';
 
 import Home from "@/views/Home.vue";
 import Robots from "@/views/Robots.vue";
@@ -37,7 +36,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(publicPath),
+  history: createWebHistory(location.hostname.includes('github.io') ? '/mirte-website/' : '/'),
   routes
 });
 
