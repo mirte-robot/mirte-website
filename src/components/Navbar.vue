@@ -2,7 +2,10 @@
 
 
   <div class="container-fluid">
-    <router-link :to="{name: 'home'}" class="navbar-brand" style="font-family: Livvic-Bold;"><h1>MIRTE</h1></router-link>
+    <router-link :to="{name: 'home'}" class="navbar-brand" style="font-family: Livvic-Bold;">
+       <img style="float: left; margin-right: 10px;" src="@/assets/images/mirte_logo.png" alt="MIRTE light" height="45">
+       <h1>MIRTE</h1>
+    </router-link>
     <button class="navbar-toggler" type="button" @click="visible=!visible" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown">
       <span class="navbar-toggler-icon"></span>
     </button>
