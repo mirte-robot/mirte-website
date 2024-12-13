@@ -8,7 +8,7 @@
    <div class="carousel-item" :class="robot == 'light' ? 'active' : ''">
      <div class="d-flex flex-column h-100" style="text-align: center;">
         <div style="flex-grow: 1;" class="img-wrap">
-           <img src="@/assets/images/light_render.png" alt="MIRTE light">
+           <img src="@/assets/images/MIRTE_lite_obstacle_sensor_transparant.png" alt="MIRTE light">
         </div>
         <div>
           <h5>MIRTE light</h5>
@@ -21,7 +21,7 @@
    <div class="carousel-item" :class="robot == 'basic' ? 'active' : ''">
      <div class="d-flex flex-column h-100" style="text-align: center;">
         <div style="flex-grow: 1;" class="img-wrap">
-           <img src="@/assets/images/basic_render.png" alt="MIRTE basic">
+           <img src="@/assets/images/MIRTE_basic_transparant.png" alt="MIRTE basic">
         </div>
         <div>
           <h5>MIRTE basic</h5>
@@ -35,7 +35,7 @@
    <div class="carousel-item" :class="robot == 'pioneer' ? 'active' : ''">
      <div class="d-flex flex-column h-100" style="text-align: center;">
         <div style="flex-grow: 1;" class="img-wrap">
-           <img src="@/assets/images/pioneer_render.png" alt="MIRTE pioneer">
+           <img src="@/assets/images/MIRTE_pioneer_transparant.png" alt="MIRTE pioneer">
         </div>
         <div>
           <h5>MIRTE pioneer</h5>
