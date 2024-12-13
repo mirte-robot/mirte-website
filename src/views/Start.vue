@@ -13,7 +13,7 @@
             <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.light") }}</p>
             <router-link :to="{name: 'start', params: { level: 'secondary', robot: 'light' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> light!</button></router-link>
           </div>
-          <img src="@/assets/images/light_render.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE basic">
+          <img src="@/assets/images/MIRTE_lite_obstacle_sensor_transparant.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE basic">
         </div>
       </div>
 
@@ -24,7 +24,7 @@
             <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.basic") }}</p>
             <router-link :to="{name: 'start', params: { level: 'secondary', robot: 'basic' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> basic!</button></router-link>
           </div>
-          <img src="@/assets/images/basic_render.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE pioneer">
+          <img src="@/assets/images/MIRTE_basic_transparant.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE pioneer">
         </div>
       </div>
    </div>
@@ -41,7 +41,7 @@
             <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.basic") }}</p>
             <router-link :to="{name: 'start', params: { level: 'secondary', robot: 'basic' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> basic!</button></router-link>
           </div>
-          <img src="@/assets/images/basic_render.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE basic">
+          <img src="@/assets/images/MIRTE_basic_transparant.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE basic">
         </div>
       </div>
 
@@ -52,7 +52,7 @@
             <p style="margin: auto; max-width: 500px; margin-bottom: 50px;" >{{ $t("robots.pioneer") }}</p>
             <router-link :to="{name: 'start', params: { level: 'secondary', robot: 'pioneer' }}"><button class="btn my-button">{{ $t("robots.start") }} <span class="mirte">MIRTE</span> pioneer!</button></router-link>
           </div>
-          <img src="@/assets/images/pioneer_render.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE pioneer">
+          <img src="@/assets/images/MIRTE_pioneer_transparant.png" style="width: 50%; margin-left: auto; margin-right: auto;" alt="MIRTE pioneer">
         </div>
       </div>
    </div>
