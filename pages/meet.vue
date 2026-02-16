@@ -39,6 +39,8 @@ const events = [
   { title: 'Techniek Tastbaar 2024', location: 'Zoetermeer, NL', startDate: '2024-10-25'},
   { title: 'Techniek Tastbaar 2025', location: 'Zoetermeer, NL', startDate: '2025-10-17'},
   { title: 'Dutch Innovation Factory - MBO', location: 'Zoetermeer, NL', startDate: '2023-04-21', link: 'https://dutchinnovationpark.nl/nl/overzicht/evenementenpagina/mborijnland-tudelft-robot-mirte/'},
+  { title: 'STEM Expo 2026 - ASH', location: 'Wassenaar, NL', startDate: '2026-02-07', link: 'https://www.ash.nl/academics/stem/robotics-championships-and-stem-expo'},
+  { title: 'GeoFort', location: 'Herwijnen, NL', startDate: '2026-02-20', link: 'https://www.geofort.nl'},
 
 ]
 
