@@ -28,10 +28,13 @@ const base = ref('dxf')
 // methods
 function getUrl() {
   if (software.value === "orange_pi_zero2") {
-    return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/download/0.1.1/mirte_orangepizero2_v0.1.1.img.xz";
+    return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/download/0.2.0/mirte_orangepizero2_0.2.0.img.xz";
+  }
+  if (software.value === "orange_pi_3b") {
+    return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/download/0.2.0/mirte_orangepi3b_0.2.0.img.xz";
   } 
   if (software.value === "raspberry_pi") {
-    return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/download/0.1.1/mirte_rpi4b_v0.1.1.img.xz";
+    return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/download/0.2.0/mirte_rpi4b_0.2.0.img.xz";
   } 
   if (software.value === "latest_release") {
     return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/latest";
@@ -100,6 +103,7 @@ function getUrlDXF() {
 
       <select v-if="level === 'higher'" class="form-select" v-model="software" aria-label="software_choice">
         <option value="orange_pi_zero2" selected>Orange Pi Zero 2</option>
+        <option value="orange_pi_3b" selected>Orange Pi 3b</option>
         <option value="raspberry_pi">Raspberry Pi 4/5</option>
         <option value="latest_release">{{ $t("start.software_source_release") }}</option>
         <option value="main">{{ $t("start.software_source_latest") }}</option>
