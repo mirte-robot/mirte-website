@@ -17,6 +17,7 @@ const localePath = useLocalePath()
       <span class="mirte">MIRTE</span> {{ $t("footer") }} TU Delft -
       <NuxtLink to="mailto:info@mirte.org">contact</NuxtLink> -
       <NuxtLink to="https://github.com/mirte-robot" target="_blank" rel="noopener noreferrer">github</NuxtLink> -
+      <NuxtLink to="https://discord.gg/T54MZTberQ" target="_blank" rel="noopener noreferrer">discord</NuxtLink> -
       <NuxtLink :to="localePath({ path: '/privacy' })" >privacy</NuxtLink>
     </footer>
   </div>

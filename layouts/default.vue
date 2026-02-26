@@ -20,6 +20,7 @@ const head = useLocaleHead()
         <li class="nav-item">
           <NuxtLink :to="localePath('index')" class="nav-link" @click="visible = !visible"> {{ $t("navbar.home") }}</NuxtLink>
         </li>
+        
         <li class="nav-item dropdown">
           <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
@@ -32,6 +33,7 @@ const head = useLocaleHead()
               <span class="mirte">MIRTE</span>'s {{ $t("navbar.stories") }}</NuxtLink>
           </ul>
         </li>
+
         <li class="nav-item dropdown">
           <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
@@ -52,6 +54,7 @@ const head = useLocaleHead()
               <span class="mirte">MIRTE</span> Master</NuxtLink>
           </ul>
         </li>
+
         <li class="nav-item dropdown">
           <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
@@ -70,6 +73,7 @@ const head = useLocaleHead()
             </NuxtLink>
           </ul>
         </li>
+
         <li class="nav-item dropdown">
           <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
@@ -84,10 +88,22 @@ const head = useLocaleHead()
             </NuxtLink>
           </ul>
         </li>
-        <li class="nav-item">
-          <NuxtLink :to="localePath({ path: '/meet' })" class="nav-link" @click="visible = !visible"> {{ $t("navbar.meet") }} MIRTE
-          </NuxtLink>
+
+        <li class="nav-item dropdown">
+          <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            {{ $t("navbar.community") }}
+          </div>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+            <NuxtLink :to="localePath({ path: '/meet' })" class="nav-link" @click="visible = !visible"> 
+              {{ $t("navbar.meet") }} MIRTE
+            </NuxtLink>
+            <NuxtLink to="https://discord.gg/T54MZTberQ" class="nav-link d-flex"  target="_blank" rel="noopener noreferrer">
+              Discord <ClientOnly><FontAwesomeIcon icon="arrow-up-right-from-square" /></ClientOnly>
+            </NuxtLink>
+          </ul>
         </li>
+
         <li class="nav-item dropdown">
           <LocaleChanger/>
         </li>
