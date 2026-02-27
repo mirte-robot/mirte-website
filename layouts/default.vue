@@ -99,7 +99,7 @@ const head = useLocaleHead()
               {{ $t("navbar.meet") }} MIRTE
             </NuxtLink>
             <NuxtLink to="https://discord.gg/T54MZTberQ" class="nav-link d-flex"  target="_blank" rel="noopener noreferrer">
-              Discord <ClientOnly><FontAwesomeIcon icon="arrow-up-right-from-square" /></ClientOnly>
+              {{ $t("navbar.discord") }}
             </NuxtLink>
           </ul>
         </li>
