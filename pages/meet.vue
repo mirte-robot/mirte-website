@@ -41,7 +41,10 @@ const events = [
   { title: 'Dutch Innovation Factory - MBO', location: 'Zoetermeer, NL', startDate: '2023-04-21', link: 'https://dutchinnovationpark.nl/nl/overzicht/evenementenpagina/mborijnland-tudelft-robot-mirte/'},
   { title: 'STEM Expo 2026 - ASH', location: 'Wassenaar, NL', startDate: '2026-02-07', link: 'https://www.ash.nl/academics/stem/robotics-championships-and-stem-expo'},
   { title: 'GeoFort', location: 'Herwijnen, NL', startDate: '2026-02-20', link: 'https://www.geofort.nl'},
-
+  { title: 'Delft MakerFaire 2026', location: 'Delft, NL', startDate: '2026-05-08', link: 'https://delft.makerfaire.com/programma-maker-faire-2026/'},
+  { title: 'Practical Engineering Education 2026', location: 'Edinburgh, UK', startDate: '2026-07-02', endDate: '2026-07-03', link: 'https://eng.ed.ac.uk/pee26' },
+  { title: 'De Schatkamer van Alexander Pechtold', location: 'Lisse, NL', startDate: '2026-05-19', endDate: '2027-02-28', link: 'https://www.museumprinsenhofdelft.nl/activiteiten/zie-hoe-delft-bloeit-de-schatkamer-van-alexander-pechtold' },
+  
 ]
 
 const today = new Date()
