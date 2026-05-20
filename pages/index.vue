@@ -21,7 +21,7 @@ const backgroundStyles = computed(() => {
 
 
 const backgroundStyles2 = computed(() => {
-  const imgUrl2 = img('/images/lijn.png')
+  const imgUrl2 = img('/images/lijn.svg')
   return { backgroundImage: `url('${imgUrl2}')` }
 })
 

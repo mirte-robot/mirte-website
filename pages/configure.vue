@@ -68,7 +68,7 @@ function switchRobot(newRobot){
 
     <div v-if="selectable" class="row">
       <div class="col-4" @click="switchRobot('lite')" style="text-align: center;">
-        <button :style="robot == 'lite' ? 'background-color: #f1be45;': ''">
+        <button :style="robot == 'lite' ? 'background-color: #fbb927;': ''">
           <div style="padding: 10px;">
             <NuxtImg style="max-height:50px;" src="/images/MIRTE_lite_obstacle_sensor_transparant.png" alt="MIRTE lite picture" height="50" width="50" format="webp"/>
             <span class="mirte">MIRTE</span> Lite
@@ -76,7 +76,7 @@ function switchRobot(newRobot){
         </button> 
       </div>
       <div class="col-4" @click="switchRobot('basic')" style="text-align: center;">
-        <button :style="robot == 'basic' ? 'background-color: #f1be45;': ''">
+        <button :style="robot == 'basic' ? 'background-color: #fbb927;': ''">
           <div style="padding: 10px;">
             <NuxtImg style="max-height:50px;" src="/images/MIRTE_basic_transparant.png" alt="MIRTE basic picture" height="50" width="50" format="webp"/>
             <span class="mirte">MIRTE</span> Basic
@@ -84,7 +84,7 @@ function switchRobot(newRobot){
         </button>
       </div>
       <div class="col-4" @click="switchRobot('pioneer')" style="text-align: center;">
-        <button :style="robot == 'pioneer' ? 'background-color: #f1be45;': ''">
+        <button :style="robot == 'pioneer' ? 'background-color: #fbb927;': ''">
           <div style="padding: 10px;">
             <NuxtImg style="max-height:50px;" src="/images/MIRTE_pioneer_transparant.png" alt="MIRTE pioneer picture" height="50" width="50" format="webp"/>
             <span class="mirte">MIRTE</span> Pioneer
@@ -111,7 +111,7 @@ function switchRobot(newRobot){
             style="padding-top: 7px; "
         >
           <input
-            style="accent-color: #9db7be;"
+            style="accent-color: #6089ba;"
             type="checkbox"
             :id="'checkbox_' + index_component + '_' + index_option"
             :checked="selected.includes(option)"

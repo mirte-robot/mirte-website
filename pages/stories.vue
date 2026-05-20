@@ -129,7 +129,7 @@ const formatDate = (dateStr) => {
   bottom: 0;
   left: 50%;
   width: 4px;
-  background-color: #f1be45;
+  background-color: #fbb927;
   transform: translateX(-50%);
   z-index: 0;
 }
@@ -208,7 +208,7 @@ const formatDate = (dateStr) => {
   transform: translateX(-50%);
   width: 1rem;
   height: 1rem;
-  background-color: #f1be45;
+  background-color: #fbb927;
   border-radius: 50%;
   z-index: 2;
 }
@@ -231,7 +231,7 @@ const formatDate = (dateStr) => {
     bottom: 0;
     left: 50%;
     width: 4px;
-    background-color: #f1be45;
+    background-color: #fbb927;
     transform: translateX(-50%);
     z-index: 0;
   }
