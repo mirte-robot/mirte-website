@@ -44,7 +44,8 @@ const events = [
   { title: 'Delft MakerFaire 2026', location: 'Delft, NL', startDate: '2026-05-08', link: 'https://delft.makerfaire.com/programma-maker-faire-2026/'},
   { title: 'Practical Engineering Education 2026', location: 'Edinburgh, UK', startDate: '2026-07-02', endDate: '2026-07-03', link: 'https://eng.ed.ac.uk/pee26' },
   { title: 'De Schatkamer van Alexander Pechtold', location: 'Lisse, NL', startDate: '2026-05-19', endDate: '2027-02-28', link: 'https://www.museumprinsenhofdelft.nl/activiteiten/zie-hoe-delft-bloeit-de-schatkamer-van-alexander-pechtold' },
-  
+  { title: 'ACM SIGSOFT Summer School for Software Engineering in Robotics 2026', location: 'Delft, NL', startDate: '2026-06-29', endDate: '2026-07-03', link: 'https://www.scivenia.com/en/event/summer-school-for-software-engineering-in-robotics-III' },
+  { title: 'ComeniusFestival 2026', location: 'Nieuwegein, NL', startDate: '2026-06-25', link: 'https://www.comeniusfestival.nl/nederlandse-onderwijspremie/'},
 ]
 
 const today = new Date()
