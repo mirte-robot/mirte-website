@@ -92,7 +92,7 @@
     "servo": "SG90 Servo (2x)",
     "oled": "128x64 I2C Oled (2x)",
     "reflectance_sensor": "Reflectie (TCRT5000) (2x)",
-    "light_sensor": "Lichtt LDR (LM393) (2x)",
+    "light_sensor": "Licht LDR (LM393) (2x)",
     "ir_obstacle_sensor": "IR obstakel (2x)",
     "us_distance_sensor": "Ultrasoon afstand (HC-SR04) (2x)",
     "keypad": "5 Toesten Toetsenbord",
