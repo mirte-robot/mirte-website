@@ -51,7 +51,11 @@ const backgroundStyles2 = computed(() => {
         <div class="two-column">
             <div class="column-text">
                 <p>{{ $t("home.mission_text_1") }}</p>
-                <p v-html="$t('home.mission_text_2', {strongStart: '<strong>',strongEnd: '</strong>'})"></p>
+                <p v-html="$t('home.mission_text_2') + 
+                           '<b><a href=https://www.surf.nl/nieuws/winnaars-surf-onderwijsawards-2025-brengen-vernieuwing-van-ai-tot-robotica>' + $t('home.SURF_award') + '</a></b>' +
+                           $t('home.mission_text_3') +
+                           '<b><a href=https://www.nko.nl/nieuws/nederlandse-onderwijspremie-2026-uitgereikt>' + $t('home.Dutch_Education_award') + '</a></b>' +
+                           $t('home.mission_text_4')"></p>
                 <NuxtLink :to="{ path: '/why' }" ><button class="btn my-button">{{ $t("home.read_more_why") }}</button></NuxtLink>
               </div>
             <div class="column-pillars">
