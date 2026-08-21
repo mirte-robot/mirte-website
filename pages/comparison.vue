@@ -91,6 +91,16 @@ const features = [
           pioneer: { status: 'yes' },
           master: { status: 'yes' }
         }
+      },
+      {
+        name: 'VSCode intergration',
+        tooltip: 'Program using VSCode (onboard or locally).',
+        values: {
+          lite: { status: 'no' },
+          basic: { status: 'no' },
+          pioneer: { status: 'yes' },
+          master: { status: 'yes' }
+        }
       }
     ]
   },
@@ -109,13 +119,23 @@ const features = [
         }
       },
       {
-        name: 'Obstacle avoidance',
+        name: 'IR Obstacle avoidance',
         tooltip: 'Avoid nearby obstacles.',
         values: {
           lite: { status: 'yes' },
           basic: { status: 'yes' },
           pioneer: { status: 'yes' },
-          master: { status: 'yes' }
+          master: { status: 'no' }
+        }
+      },
+      {
+        name: 'Color sensing',
+        tooltip: 'Detecting colors.',
+        values: {
+          lite: { status: 'no' },
+          basic: { status: 'future', tooltip: 'Planned for future software releases.'  },
+          pioneer: { status: 'yes' },
+          master: { status: 'no' }
         }
       },
       {
@@ -196,16 +216,6 @@ const features = [
     category: 'AI & Robotics',
     rows: [
       {
-        name: 'Computer Vision',
-        tooltip: 'Image recognition and AI projects using OpenCV and/or YOLO.',
-        values: {
-          lite: { status: 'no' },
-          basic: { status: 'no' },
-          pioneer: { status: 'yes' },
-          master: { status: 'yes' }
-        }
-      },
-      {
         name: 'Manipulation',
         tooltip: 'Ability to move objects around (using MoveIt!)',
         values: {
@@ -218,6 +228,16 @@ const features = [
             status: 'limited',
             tooltip: 'Possible, but limited. Only small SG90 servos. No MoveIt support.'
           },
+          master: { status: 'yes' }
+        }
+      },
+      {
+        name: 'Computer Vision',
+        tooltip: 'Image recognition and AI projects using OpenCV and/or YOLO.',
+        values: {
+          lite: { status: 'no' },
+          basic: { status: 'no' },
+          pioneer: { status: 'yes' },
           master: { status: 'yes' }
         }
       },
