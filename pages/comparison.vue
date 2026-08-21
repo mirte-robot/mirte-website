@@ -20,24 +20,28 @@ const activeTooltip = ref(null)
 const robots = [
   {
     id: 'lite',
+    price: '€10-€20',
     name: 'MIRTE Lite',
     image: '/images/MIRTE_lite_obstacle_sensor_transparant.png',
     bestFor: 'First robotics lessons'
   },
   {
     id: 'basic',
+    price: '€25-€40',
     name: 'MIRTE Basic',
     image: '/images/MIRTE_basic_transparant.png',
     bestFor: 'Learning Python'
   },
   {
     id: 'pioneer',
+    price: '€100-€150',
     name: 'MIRTE Pioneer',
     image: '/images/MIRTE_pioneer_transparant.png',
     bestFor: 'AI & autonomy'
   },
   {
     id: 'master',
+    price: '€800-€900',
     name: 'MIRTE Master',
     image: '/images/MIRTEMasterCloseUp.png',
     bestFor: 'Advanced robotics'
@@ -145,6 +149,16 @@ const features = [
         }
       },
       {
+        name: 'Live sensor data',
+        tooltip: 'View live sensor data over a wireless connection.',
+        values: {
+          lite: { status: 'no' },
+          basic: { status: 'no' },
+          pioneer: { status: 'yes' },
+          master: { status: 'yes' }
+        }
+      },
+      {
         name: 'Lidar',
         tooltip: 'Laser-based ranging sensor.',
         values: {
@@ -231,7 +245,7 @@ const features = [
   },
 
   {
-    category: 'Custamizability',
+    category: 'Customizability',
     rows: [
       {
         name: 'Breadboard as alternative to PCB',
@@ -254,6 +268,16 @@ const features = [
         }
       },
       {
+        name: 'Support for multiple microcontrolers',
+        tooltip: 'Use different Microcontrollers when using a breadboard.',
+        values: {
+          lite: { status: 'no' },
+          basic: { status: 'future', tooltip: 'Planned for future releases (when compatable with MicroPython).' },
+          pioneer: { status: 'yes', tooltip: 'When compatable with Telemetrix.' },
+          master: { status: 'no' }
+        }
+      },
+      {
         name: 'Easy wiring with PCB',
         tooltip: 'Use the MIRTE PCB to simplify assembly.',
         values: {
@@ -261,6 +285,16 @@ const features = [
           basic: { status: 'yes' },
           pioneer: { status: 'yes' },
           master: { status: 'yes' }
+        }
+      },
+      {
+        name: 'Ability to upgrade computer',
+        tooltip: 'Use different SBC.',
+        values: {
+          lite: { status: 'no' },
+          basic: { status: 'no' },
+          pioneer: { status: 'yes', tooltip: 'Orange Pi 3B, Raspberry Pi' },
+          master: { status: 'yes', tooltip: 'Raspberry Pi' }
         }
       },
       {
@@ -328,7 +362,7 @@ function getClass(status) {
               Feature
             </th>
 
-            <th v-for="robot in robots" :key="robot.id" class="text-center">
+            <th v-for="robot in robots" :key="robot.id" class="text-center robot-item">
               <NuxtImg :src="robot.image" :alt="robot.name" width="70" height="70" format="webp" />
 
               <div class="robot-name">
@@ -337,10 +371,35 @@ function getClass(status) {
             </th>
           </tr>
 
-
         </thead>
 
         <tbody>
+
+
+          <tr>
+            <td class="feature-column">
+              Price indication of components
+
+              <span class="tooltip-wrapper" @mouseenter="activeTooltip = 'robot-price'"
+                @mouseleave="activeTooltip = null">
+                <ClientOnly>
+                  <FontAwesomeIcon icon="circle-info" />
+                </ClientOnly>
+
+                <span v-if="activeTooltip === 'robot-price'" class="tooltip-box">
+                  Price indication when buying the components yourself. Actual costs
+                  depend on supplier, region, and selected options.
+                </span>
+              </span>
+            </td>
+
+            <td v-for="robot in robots" :key="robot.id" class="text-center">
+              <div class="robot-price">
+                {{ robot.price }}
+              </div>
+            </td>
+          </tr>
+
 
           <template v-for="category in features" :key="category.category">
 
@@ -412,6 +471,10 @@ function getClass(status) {
 .comparison-table th {
   background-color: #b8d1eb;
   color: white;
+}
+
+.robot-item {
+  width: 200px;
 }
 
 .robot-name {
