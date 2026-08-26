@@ -342,7 +342,7 @@ const statusInfo = {
   },
   future: {
     icon: 'clock',
-    class: 'supported-limited'
+    class: 'supported-future'
   },
   no: {
     icon: 'xmark',
@@ -479,6 +479,8 @@ function getClass(status) {
     </div>
 
   </div>
+
+  
 </template>
 
 <style scoped>
@@ -524,7 +526,7 @@ function getClass(status) {
 }
 
 .supported-future {
-  color: #6089ba;
+  color: rgb(69, 69, 70);
   font-size: 1.4rem;
 }
 
