@@ -133,7 +133,7 @@ const features = [
         tooltip: 'Detecting colors.',
         values: {
           lite: { status: 'no' },
-          basic: { status: 'future', tooltip: 'Planned for future software releases.'  },
+          basic: { status: 'future', tooltip: 'Planned for future software releases.' },
           pioneer: { status: 'yes' },
           master: { status: 'no' }
         }
@@ -188,10 +188,7 @@ const features = [
             status: 'limited',
             tooltip: 'Requires additional Lidar hardware.'
           },
-          master: {
-            status: 'yes',
-            tooltip: 'Fully supported.'
-          }
+          master: { status: 'yes'}
         }
       },
       {
@@ -440,7 +437,7 @@ function getClass(status) {
                     <FontAwesomeIcon icon="circle-info" />
                   </ClientOnly>
 
-                  <span v-if="activeTooltip === feature.name" class="tooltip-box">
+                  <span v-if="activeTooltip === feature.name" :class="['tooltip-box', feature.name === 'Hardware models' ? 'tooltip-box-up' : '']">
                     {{ feature.tooltip }}
                   </span>
 
@@ -457,12 +454,12 @@ function getClass(status) {
                       :class="getClass(feature.values[robot.id].status)" />
                   </ClientOnly>
                   {{ feature.values[robot.id].text }}
-                  <span v-if="
-                    feature.values[robot.id].tooltip &&
-                    activeTooltip === feature.name + robot.id
-                  " class="tooltip-box">
+                  <span v-if="feature.values[robot.id].tooltip &&
+                    activeTooltip === feature.name + robot.id" 
+                    :class="['tooltip-box', robot.id === 'master' ? 'tooltip-box-right' : '']">
                     {{ feature.values[robot.id].tooltip }}
                   </span>
+
 
                 </span>
 
@@ -480,7 +477,7 @@ function getClass(status) {
 
   </div>
 
-  
+
 </template>
 
 <style scoped>
@@ -488,6 +485,11 @@ function getClass(status) {
   text-align: center;
   padding-top: 40px;
   padding-bottom: 25px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  overflow-y: visible !important;
 }
 
 .comparison-table th {
@@ -544,7 +546,8 @@ function getClass(status) {
   position: absolute;
   top: 24px;
   left: 0;
-  width: 260px;
+  min-width: 200px;
+  max-width: 260px;
   background: white;
   color: black;
   border: 1px solid #ddd;
@@ -554,6 +557,16 @@ function getClass(status) {
   font-size: 0.9rem;
   text-align: left;
   box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+}
+
+.tooltip-box-right {
+  left: auto;
+  right: 0;
+}
+
+.tooltip-box-up {
+  top: auto;
+  bottom: 24px;
 }
 
 .legend {
