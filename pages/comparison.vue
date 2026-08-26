@@ -93,7 +93,7 @@ const features = [
         }
       },
       {
-        name: 'VSCode intergration',
+        name: 'VSCode integration',
         tooltip: 'Program using VSCode (onboard or locally).',
         values: {
           lite: { status: 'no' },
@@ -150,7 +150,7 @@ const features = [
       },
       {
         name: 'IMU',
-        tooltip: 'Measure orientation and accelaration of the robot.',
+        tooltip: 'Measure orientation and acceleration of the robot.',
         values: {
           lite: { status: 'no' },
           basic: { status: 'future', tooltip: 'Planned for future software releases.' },
@@ -222,11 +222,11 @@ const features = [
           lite: { status: 'no' },
           basic: {
             status: 'limited',
-            tooltip: 'Possible, but limited. Only small SG90 servos. No MoveIt support.'
+            tooltip: 'Possible, but limited. Only PWM controlled servos. No MoveIt support.'
           },
           pioneer: {
             status: 'limited',
-            tooltip: 'Possible, but limited. Only small SG90 servos. No MoveIt support.'
+            tooltip: 'Possible, but limited. Only PWM controlled servos. No MoveIt support.'
           },
           master: { status: 'yes' }
         }
@@ -253,7 +253,7 @@ const features = [
       },
       {
         name: 'Audio output',
-        tooltip: 'Image recognition and AI projects.',
+        tooltip: 'The ability to let MIRTE play sounds.',
         values: {
           lite: { status: 'no' },
           basic: { status: 'no' },
@@ -538,7 +538,6 @@ function getClass(status) {
 .tooltip-wrapper,
 .cell-wrapper {
   position: relative;
-  cursor: help;
 }
 
 .tooltip-box {
