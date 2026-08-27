@@ -42,8 +42,8 @@
     "start_learning": "Start working with the learning materials.",
     "do_workshop": "Ór follow one of the on-site workshops."
   },
-  "about":{
-    "why":{
+  "about": {
+    "why": {
       "mission": "'s Mission",
       "mission_text": "{strongStart}Our mission is to inspire students in science and engineering.{strongEnd} With the MIRTE robot we are able to create meaningful hands-on learning experiences across multiple engineering disciplines. As an {strongStart}open{strongEnd}, {strongStart}modular{strongEnd}, and {strongStart}affordable{strongEnd} platform, MIRTE makes robotics accessible for learners from primary school to university level.",
       "pillars": "'s Three Pillars",
@@ -144,7 +144,7 @@
     "select_robot_higher_text": "At primary level you can start with the MIRTE Pioneer, or the MIRTE Master.",
     "select_robot_all_text": "You can find the overview of the MIRTE family below."
   },
-  "mirte_complexity":{
+  "mirte_complexity": {
     "mechanical": "Mechanical",
     "programming": "Programming",
     "electronics": "Electronics",
@@ -158,7 +158,7 @@
     "PCB": "PCB Design",
     "ROS": "Linux/ROS2"
   },
-  "meet":{
+  "meet": {
     "workshops": "Workshops",
     "events": "Events",
     "weekends": "Every weekend",
@@ -166,6 +166,92 @@
     "onrequest": "On request",
     "workshops_text": "There are multiple institutions organizing workshops with the MIRTE robot.",
     "events_text": "MIRTE is also present at conferences, makerfaires, summerschools and other events."
+  },
+  "comparison": {
+    "title": "Which MIRTE robot should I choose?",
+    "intro": "Compare the available MIRTE robots and find the best fit for your classroom, project or learning goals.",
+    "feature_column": "Feature",
+    "price_indication": "Price indication of components",
+    "prices": "Price indication of components",
+    "prices_tooltip": "Price indication when buying the components yourself. Actual costs depend on supplier, region, and selected options.",
+    "robot_best_for": {
+      "lite": "First robotics lessons",
+      "basic": "Learning Python",
+      "pioneer": "AI & autonomy",
+      "master": "Advanced robotics"
+    },
+    "tooltips": {
+      "robot_price": "Price indication when buying the components yourself. Actual costs depend on supplier, region, and selected options.",
+      "block_programming": "Visual drag-and-drop programming.",
+      "python_programming": "Program the robot using Python.",
+      "cpp_programming": "Program the robot using C/C++.",
+      "linux_ros": "Linux and Robot Operating System support.",
+      "vscode_integration": "Program using VSCode (onboard or locally).",
+      "line_following": "Follow lines using reflectance sensors.",
+      "ir_obstacle_avoidance": "Avoid nearby obstacles.",
+      "color_sensing": "Detecting colors.",
+      "distance_sensing": "Measure distance to objects.",
+      "imu": "Measure orientation and acceleration of the robot.",
+      "camera": "Capture images and video.",
+      "live_sensor_data": "View live sensor data over a wireless connection.",
+      "lidar": "Laser-based ranging sensor.",
+      "depth_camera": "Detect depth and 3D structure.",
+      "manipulation": "Ability to move objects around (using MoveIt!)",
+      "computer_vision": "Image recognition and AI projects using OpenCV and/or YOLO.",
+      "navigation": "Autonomous navigation with the robot using Nav2.",
+      "audio_output": "The ability to let MIRTE play sounds.",
+      "breadboard_alternative": "Learn electronics by creating connections yourself.",
+      "lego_compatibility": "Use the MIRTE PCB to simplify assembly.",
+      "multiple_microcontrollers": "Use different Microcontrollers when using a breadboard.",
+      "easy_wiring": "Use the MIRTE PCB to simplify assembly.",
+      "upgrade_computer": "Use different SBC.",
+      "hardware_models": "Use the MIRTE PCB to simplify assembly."
+    },
+    "categories": {
+      "programming": "Programming",
+      "sensors": "Sensors",
+      "ai_robotics": "AI & Robotics",
+      "customizability": "Customizability"
+    },
+    "features": {
+      "block_programming": "Block programming",
+      "python_programming": "Python programming",
+      "cpp_programming": "C/C++ programming",
+      "linux_ros": "Linux / ROS",
+      "vscode_integration": "VSCode integration",
+      "line_following": "Line following",
+      "ir_obstacle_avoidance": "IR Obstacle avoidance",
+      "color_sensing": "Color sensing",
+      "distance_sensing": "Distance sensing",
+      "imu": "IMU",
+      "camera": "Camera",
+      "live_sensor_data": "Live sensor data",
+      "lidar": "Lidar",
+      "depth_camera": "Depth camera",
+      "manipulation": "Manipulation",
+      "computer_vision": "Computer Vision",
+      "navigation": "Navigation",
+      "audio_output": "Audio output",
+      "breadboard_alternative": "Breadboard as alternative to PCB",
+      "lego_compatibility": "Compatible with LEGO Technics",
+      "multiple_microcontrollers": "Support for multiple microcontrolers",
+      "easy_wiring": "Easy wiring with PCB",
+      "upgrade_computer": "Ability to upgrade computer",
+      "hardware_models": "Hardware models"
+    },
+    "value_tooltips": {
+      "future_release": "Planned for future software releases.",
+      "future_release_general": "Planned for future releases.",
+      "basic_cpp": "You can use the Raspberry Pi Pico C/C++ SDK.",
+      "pioneer_lidar": "Requires additional Lidar hardware.",
+      "pioneer_depth_camera": "Requires additional depth camera.",
+      "basic_manipulation": "Possible, but limited. Only PWM controlled servos. No MoveIt support.",
+      "pioneer_manipulation": "Possible, but limited. Only PWM controlled servos. No MoveIt support.",
+      "pioneer_navigation": "Possible, but limited by hardware performance.",
+      "multiple_microcontrollers_basic": "Planned for future releases (when compatable with MicroPython).",
+      "multiple_microcontrollers_pioneer": "When compatable with Telemetrix.",
+      "upgrade_computer_pioneer": "Orange Pi 3B, Raspberry Pi",
+      "upgrade_computer_master": "Raspberry Pi"
+    }
   }
 }
-

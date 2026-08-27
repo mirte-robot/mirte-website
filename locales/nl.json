@@ -42,8 +42,8 @@
     "start_learning": "Ga aan de slag met het lesmateriaal.",
     "do_workshop": "Óf volg een van de workshops op locatie."
   },
-  "about":{
-    "why":{
+  "about": {
+    "why": {
       "mission": "'s Missie",
       "mission_text": "{strongStart}Het is onze missie om studenten te inspireren in wetenschap en technologie.{strongEnd} Met de MIRTE-robot kunnen we betekenisvolle, praktijkgerichte leerervaringen creëren binnen meerdere technische disciplines. Als een {strongStart}open{strongEnd}, {strongStart}modulair{strongEnd} en {strongStart}betaalbaar{strongEnd} platform maakt MIRTE robotica toegankelijk voor leerlingen van de basisschool tot en met de universiteit.",
       "pillars": "'s Drie Pijlers",
@@ -144,7 +144,7 @@
     "select_robot_higher_text": "Voor het hoger onderwijs kan je beginnen met de MIRTE Pioneer of de MIRTE Master.",
     "select_robot_all_text": "Hieronder vind je een overzicht van de gehele MIRTE familie."
   },
-  "mirte_complexity":{
+  "mirte_complexity": {
     "mechanical": "Mechanica",
     "programming": "Programmeren",
     "electronics": "Electronica",
@@ -158,7 +158,7 @@
     "PCB": "PCB Design",
     "ROS": "Linux/ROS2"
   },
-  "meet":{
+  "meet": {
     "workshops": "Workshops",
     "events": "Evenementen",
     "weekends": "Elk weekend",
@@ -166,7 +166,91 @@
     "onrequest": "Op aanvraag",
     "workshops_text": "Er zijn meerdere organiaties die workshops met de MIRTE robot organiseren.",
     "events_text": "MIRTE is ook aanwezig op conferencies, makerfaires, summerschools en andere evenementen."
+  },
+  "comparison": {
+    "title": "Welke MIRTE-robot moet ik kiezen?",
+    "intro": "Vergelijk de beschikbare MIRTE-robots en ontdek welke het beste past bij jouw klas, project of leerdoelen.",
+    "feature_column": "Eigenschap",
+    "prices": "Indicatie van de componentkosten",
+    "prices_tooltip": "Indicatie van de kosten wanneer je de componenten zelf aanschaft. De werkelijke kosten zijn afhankelijk van de leverancier, regio en de gekozen configuratie.",
+    "robot_best_for": {
+      "lite": "Eerste lessen robotica",
+      "basic": "Python leren",
+      "pioneer": "AI & autonomie",
+      "master": "Geavanceerde robotica"
+    },
+    "tooltips": {
+      "robot_price": "Prijsindicatie wanneer je de onderdelen zelf aanschaft. De werkelijke kosten zijn afhankelijk van leverancier, regio en gekozen opties.",
+      "block_programming": "Visueel programmeren met blokken door middel van drag-and-drop.",
+      "python_programming": "Programmeer de robot met Python.",
+      "cpp_programming": "Programmeer de robot met C/C++.",
+      "linux_ros": "Ondersteuning voor Linux en Robot Operating System.",
+      "vscode_integration": "Programmeren met VSCode (op de robot of lokaal).",
+      "line_following": "Volg lijnen met behulp van reflectiesensoren.",
+      "ir_obstacle_avoidance": "Vermijd nabijgelegen obstakels.",
+      "color_sensing": "Kleuren detecteren.",
+      "distance_sensing": "Meet de afstand tot objecten.",
+      "imu": "Meet de oriëntatie en versnelling van de robot.",
+      "camera": "Leg afbeeldingen en video vast.",
+      "live_sensor_data": "Bekijk live sensorgegevens via een draadloze verbinding.",
+      "lidar": "Afstandssensor op basis van lasertechnologie.",
+      "depth_camera": "Detecteer diepte en 3D-structuren.",
+      "manipulation": "Objecten kunnen verplaatsen (met behulp van MoveIt!).",
+      "computer_vision": "Beeldherkenning en AI-projecten met OpenCV en/of YOLO.",
+      "navigation": "Autonome navigatie met de robot via Nav2.",
+      "audio_output": "Mogelijkheid om geluiden af te spelen via MIRTE.",
+      "breadboard_alternative": "Leer elektronica door zelf verbindingen te maken.",
+      "lego_compatibility": "Gebruik de MIRTE-PCB om de montage eenvoudiger te maken.",
+      "multiple_microcontrollers": "Gebruik verschillende microcontrollers wanneer je een breadboard gebruikt.",
+      "easy_wiring": "Gebruik de MIRTE-PCB om de montage eenvoudiger te maken.",
+      "upgrade_computer": "Gebruik verschillende single-board computers.",
+      "hardware_models": "Gebruik de MIRTE-PCB om de montage eenvoudiger te maken."
+    },
+    "categories": {
+      "programming": "Programmeren",
+      "sensors": "Sensoren",
+      "ai_robotics": "AI & Robotica",
+      "customizability": "Aanpasbaarheid"
+    },
+    "features": {
+      "block_programming": "Blokprogrammeren",
+      "python_programming": "Python-programmeren",
+      "cpp_programming": "C/C++-programmeren",
+      "linux_ros": "Linux / ROS",
+      "vscode_integration": "VSCode-integratie",
+      "line_following": "Lijnvolgen",
+      "ir_obstacle_avoidance": "IR-obstakelvermijding",
+      "color_sensing": "Kleurdetectie",
+      "distance_sensing": "Afstandsmeting",
+      "imu": "IMU",
+      "camera": "Camera",
+      "live_sensor_data": "Live sensorgegevens",
+      "lidar": "Lidar",
+      "depth_camera": "Dieptecamera",
+      "manipulation": "Manipulatie",
+      "computer_vision": "Computer Vision",
+      "navigation": "Navigatie",
+      "audio_output": "Audio-uitvoer",
+      "breadboard_alternative": "Breadboard als alternatief voor PCB",
+      "lego_compatibility": "Compatibel met LEGO Technic",
+      "multiple_microcontrollers": "Ondersteuning voor meerdere microcontrollers",
+      "easy_wiring": "Eenvoudige bekabeling met PCB",
+      "upgrade_computer": "Mogelijkheid om de computer te upgraden",
+      "hardware_models": "Hardwaremodellen"
+    },
+    "value_tooltips": {
+      "future_release": "Gepland voor toekomstige softwareversies.",
+      "future_release_general": "Gepland voor toekomstige releases.",
+      "basic_cpp": "Je kunt de Raspberry Pi Pico C/C++ SDK gebruiken.",
+      "pioneer_lidar": "Vereist aanvullende Lidar-hardware.",
+      "pioneer_depth_camera": "Vereist een aanvullende dieptecamera.",
+      "basic_manipulation": "Mogelijk, maar beperkt. Alleen PWM-aangestuurde servo's. Geen ondersteuning voor MoveIt.",
+      "pioneer_manipulation": "Mogelijk, maar beperkt. Alleen PWM-aangestuurde servo's. Geen ondersteuning voor MoveIt.",
+      "pioneer_navigation": "Mogelijk, maar beperkt door de prestaties van de hardware.",
+      "multiple_microcontrollers_basic": "Gepland voor toekomstige releases (wanneer compatibel met MicroPython).",
+      "multiple_microcontrollers_pioneer": "Wanneer compatibel met Telemetrix.",
+      "upgrade_computer_pioneer": "Orange Pi 3B, Raspberry Pi",
+      "upgrade_computer_master": "Raspberry Pi"
+    }
   }
-
-
 }

@@ -23,14 +23,14 @@ const robots = [
     price: '€10-€20',
     name: 'MIRTE Lite',
     image: '/images/MIRTE_lite_obstacle_sensor_transparant.png',
-    bestFor: 'First robotics lessons'
+    bestFor: 'No programming robotics lessons'
   },
   {
     id: 'basic',
     price: '€25-€40',
     name: 'MIRTE Basic',
     image: '/images/MIRTE_basic_transparant.png',
-    bestFor: 'Learning Python'
+    bestFor: 'Learning Python & robotics'
   },
   {
     id: 'pioneer',
@@ -50,21 +50,21 @@ const robots = [
 
 const features = [
   {
-    category: 'Programming',
+    category: t('comparison.categories.programming'),
     rows: [
       {
-        name: 'Block programming',
-        tooltip: 'Visual drag-and-drop programming.',
+        name: t('comparison.features.block_programming'),
+        tooltip: t('comparison.tooltips.block_programming'),
         values: {
           lite: { status: 'no' },
           basic: { status: 'yes' },
           pioneer: { status: 'yes' },
-          master: { status: 'future', tooltip: 'Planned for future software releases.' }
+          master: { status: 'future', tooltip: t('comparison.value_tooltips.future_release') }
         }
       },
       {
-        name: 'Python programming',
-        tooltip: 'Program the robot using Python.',
+        name: t('comparison.features.python_programming'),
+        tooltip: t('comparison.tooltips.python_programming'),
         values: {
           lite: { status: 'no' },
           basic: { status: 'yes' },
@@ -73,18 +73,18 @@ const features = [
         }
       },
       {
-        name: 'C/C++ programming',
-        tooltip: 'Program the robot using C/C++.',
+        name: t('comparison.features.cpp_programming'),
+        tooltip: t('comparison.tooltips.cpp_programming'),
         values: {
           lite: { status: 'no' },
-          basic: { status: 'limited', tooltip: 'You can use the Raspberry Pi Pico C/C++ SDK.' },
+          basic: { status: 'limited', tooltip: t('comparison.value_tooltips.basic_cpp') },
           pioneer: { status: 'yes' },
           master: { status: 'yes' }
         }
       },
       {
-        name: 'Linux / ROS',
-        tooltip: 'Linux and Robot Operating System support.',
+        name: t('comparison.features.linux_ros'),
+        tooltip: t('comparison.tooltips.linux_ros'),
         values: {
           lite: { status: 'no' },
           basic: { status: 'no' },
@@ -93,8 +93,8 @@ const features = [
         }
       },
       {
-        name: 'VSCode integration',
-        tooltip: 'Program using VSCode (onboard or locally).',
+        name: t('comparison.features.vscode_integration'),
+        tooltip: t('comparison.tooltips.vscode_integration'),
         values: {
           lite: { status: 'no' },
           basic: { status: 'no' },
@@ -106,11 +106,11 @@ const features = [
   },
 
   {
-    category: 'Sensors',
+    category: t('comparison.categories.sensors'),
     rows: [
       {
-        name: 'Line following',
-        tooltip: 'Follow lines using reflectance sensors.',
+        name: t('comparison.features.line_following'),
+        tooltip: t('comparison.tooltips.line_following'),
         values: {
           lite: { status: 'yes' },
           basic: { status: 'yes' },
@@ -119,8 +119,8 @@ const features = [
         }
       },
       {
-        name: 'IR Obstacle avoidance',
-        tooltip: 'Avoid nearby obstacles.',
+        name: t('comparison.features.ir_obstacle_avoidance'),
+        tooltip: t('comparison.tooltips.ir_obstacle_avoidance'),
         values: {
           lite: { status: 'yes' },
           basic: { status: 'yes' },
@@ -129,18 +129,18 @@ const features = [
         }
       },
       {
-        name: 'Color sensing',
-        tooltip: 'Detecting colors.',
+        name: t('comparison.features.color_sensing'),
+        tooltip: t('comparison.tooltips.color_sensing'),
         values: {
           lite: { status: 'no' },
-          basic: { status: 'future', tooltip: 'Planned for future software releases.' },
+          basic: { status: 'future', tooltip: t('comparison.value_tooltips.future_release') },
           pioneer: { status: 'yes' },
           master: { status: 'no' }
         }
       },
       {
-        name: 'Distance sensing',
-        tooltip: 'Measure distance to objects.',
+        name: t('comparison.features.distance_sensing'),
+        tooltip: t('comparison.tooltips.distance_sensing'),
         values: {
           lite: { status: 'no' },
           basic: { status: 'yes' },
@@ -149,28 +149,18 @@ const features = [
         }
       },
       {
-        name: 'IMU',
-        tooltip: 'Measure orientation and acceleration of the robot.',
+        name: t('comparison.features.imu'),
+        tooltip: t('comparison.tooltips.imu'),
         values: {
           lite: { status: 'no' },
-          basic: { status: 'future', tooltip: 'Planned for future software releases.' },
+          basic: { status: 'future', tooltip: t('comparison.value_tooltips.future_release') },
           pioneer: { status: 'yes' },
           master: { status: 'yes' }
         }
       },
       {
-        name: 'Camera',
-        tooltip: 'Capture images and video.',
-        values: {
-          lite: { status: 'no' },
-          basic: { status: 'no' },
-          pioneer: { status: 'yes' },
-          master: { status: 'yes' }
-        }
-      },
-      {
-        name: 'Live sensor data',
-        tooltip: 'View live sensor data over a wireless connection.',
+        name: t('comparison.features.camera'),
+        tooltip: t('comparison.tooltips.camera'),
         values: {
           lite: { status: 'no' },
           basic: { status: 'no' },
@@ -179,27 +169,37 @@ const features = [
         }
       },
       {
-        name: 'Lidar',
-        tooltip: 'Laser-based ranging sensor.',
+        name: t('comparison.features.live_sensor_data'),
+        tooltip: t('comparison.tooltips.live_sensor_data'),
+        values: {
+          lite: { status: 'no' },
+          basic: { status: 'no' },
+          pioneer: { status: 'yes' },
+          master: { status: 'yes' }
+        }
+      },
+      {
+        name: t('comparison.features.lidar'),
+        tooltip: t('comparison.tooltips.lidar'),
         values: {
           lite: { status: 'no' },
           basic: { status: 'no' },
           pioneer: {
             status: 'limited',
-            tooltip: 'Requires additional Lidar hardware.'
+            tooltip: t('comparison.value_tooltips.pioneer_lidar')
           },
-          master: { status: 'yes'}
+          master: { status: 'yes' }
         }
       },
       {
-        name: 'Depth camera',
-        tooltip: 'Detect depth and 3D structure.',
+        name: t('comparison.features.depth_camera'),
+        tooltip: t('comparison.tooltips.depth_camera'),
         values: {
           lite: { status: 'no' },
           basic: { status: 'no' },
           pioneer: {
             status: 'limited',
-            tooltip: 'Requires additional depth camera.'
+            tooltip: t('comparison.value_tooltips.pioneer_depth_camera')
           },
           master: {
             status: 'yes'
@@ -210,27 +210,27 @@ const features = [
   },
 
   {
-    category: 'AI & Robotics',
+    category: t('comparison.categories.ai_robotics'),
     rows: [
       {
-        name: 'Manipulation',
-        tooltip: 'Ability to move objects around (using MoveIt!)',
+        name: t('comparison.features.manipulation'),
+        tooltip: t('comparison.tooltips.manipulation'),
         values: {
           lite: { status: 'no' },
           basic: {
             status: 'limited',
-            tooltip: 'Possible, but limited. Only PWM controlled servos. No MoveIt support.'
+            tooltip: t('comparison.value_tooltips.basic_manipulation')
           },
           pioneer: {
             status: 'limited',
-            tooltip: 'Possible, but limited. Only PWM controlled servos. No MoveIt support.'
+            tooltip: t('comparison.value_tooltips.pioneer_manipulation')
           },
           master: { status: 'yes' }
         }
       },
       {
-        name: 'Computer Vision',
-        tooltip: 'Image recognition and AI projects using OpenCV and/or YOLO.',
+        name: t('comparison.features.computer_vision'),
+        tooltip: t('comparison.tooltips.computer_Vision'),
         values: {
           lite: { status: 'no' },
           basic: { status: 'no' },
@@ -239,34 +239,39 @@ const features = [
         }
       },
       {
-        name: 'Navigation',
-        tooltip: 'Autonomous navigation with the robot using Nav2.',
+        name: t('comparison.features.navigation'),
+        tooltip: t('comparison.tooltips.navigation'),
         values: {
           lite: { status: 'no' },
           basic: { status: 'no' },
-          pioneer: { status: 'limited', tooltip: 'Possible, but limited by hardware performance.' },
+          pioneer: {
+            status: 'limited',
+            tooltip: t('comparison.value_tooltips.pioneer_navigation')
+          },
           master: { status: 'yes' }
         }
       },
       {
-        name: 'Audio output',
-        tooltip: 'The ability to let MIRTE play sounds.',
+        name: t('comparison.features.audio_output'),
+        tooltip: t('comparison.tooltips.audio_output'),
         values: {
           lite: { status: 'no' },
           basic: { status: 'no' },
-          pioneer: { status: 'future', tooltip: 'Planned for future releases.' },
+          pioneer: {
+            status: 'future',
+            tooltip: t('comparison.value_tooltips.future_release')
+          },
           master: { status: 'limited' }
         }
       }
     ]
   },
-
   {
-    category: 'Customizability',
+    category: t('comparison.categories.customizability'),
     rows: [
       {
-        name: 'Breadboard as alternative to PCB',
-        tooltip: 'Learn electronics by creating connections yourself.',
+        name: t('comparison.features.breadboard_alternative'),
+        tooltip: t('comparison.tooltips.breadboard_alternative'),
         values: {
           lite: { status: 'yes' },
           basic: { status: 'yes' },
@@ -274,29 +279,41 @@ const features = [
           master: { status: 'no' }
         }
       },
+      /*  {
+          name: t('comparison.features.lego_compatibility'),
+          tooltip: t('comparison.tooltips.lego_compatibility'),
+          values: {
+            lite: { status: 'no' },
+            basic: {
+              status: 'future',
+              tooltip: t('comparison.value_tooltips.future_release_general')
+            },
+            pioneer: {
+              status: 'future',
+              tooltip: t('comparison.value_tooltips.future_release_general')
+            },
+            master: { status: 'no' }
+          }
+        },*/
       {
-        name: 'Compatible with LEGO Technics',
-        tooltip: 'Use the MIRTE PCB to simplify assembly.',
+        name: t('comparison.features.multiple_microcontrollers'),
+        tooltip: t('comparison.tooltips.multiple_microcontrollers'),
         values: {
           lite: { status: 'no' },
-          basic: { status: 'future', tooltip: 'Planned for future releases.' },
-          pioneer: { status: 'future', tooltip: 'Planned for future releases.' },
+          basic: {
+            status: 'future',
+            tooltip: t('comparison.value_tooltips.multiple_microcontrollers_basic')
+          },
+          pioneer: {
+            status: 'yes',
+            tooltip: t('comparison.value_tooltips.multiple_microcontrollers_pioneer')
+          },
           master: { status: 'no' }
         }
       },
       {
-        name: 'Support for multiple microcontrolers',
-        tooltip: 'Use different Microcontrollers when using a breadboard.',
-        values: {
-          lite: { status: 'no' },
-          basic: { status: 'future', tooltip: 'Planned for future releases (when compatable with MicroPython).' },
-          pioneer: { status: 'yes', tooltip: 'When compatable with Telemetrix.' },
-          master: { status: 'no' }
-        }
-      },
-      {
-        name: 'Easy wiring with PCB',
-        tooltip: 'Use the MIRTE PCB to simplify assembly.',
+        name: t('comparison.features.easy_wiring'),
+        tooltip: t('comparison.tooltips.easy_wiring'),
         values: {
           lite: { status: 'no' },
           basic: { status: 'yes' },
@@ -305,25 +322,31 @@ const features = [
         }
       },
       {
-        name: 'Ability to upgrade computer',
-        tooltip: 'Use different SBC.',
+        name: t('comparison.features.upgrade_computer'),
+        tooltip: t('comparison.tooltips.upgrade_computer'),
         values: {
           lite: { status: 'no' },
           basic: { status: 'no' },
-          pioneer: { status: 'yes', tooltip: 'Orange Pi 3B, Raspberry Pi' },
-          master: { status: 'yes', tooltip: 'Raspberry Pi' }
+          pioneer: {
+            status: 'yes',
+            tooltip: t('comparison.value_tooltips.upgrade_computer_pioneer')
+          },
+          master: {
+            status: 'yes',
+            tooltip: t('comparison.value_tooltips.upgrade_computer_master')
+          }
         }
       },
       {
-        name: 'Hardware models',
-        tooltip: 'Use the MIRTE PCB to simplify assembly.',
+        name: t('comparison.features.hardware_models'),
+        tooltip: t('comparison.tooltips.hardware_models'),
         values: {
           lite: { text: 'FreeCAD' },
           basic: { text: 'FreeCAD' },
           pioneer: { text: 'FreeCAD' },
-          master: { text: 'Solidworks' }
+          master: { text: 'SolidWorks' }
         }
-      },
+      }
     ]
   }
 ]
@@ -347,6 +370,9 @@ const statusInfo = {
   }
 }
 
+
+
+
 function getIcon(status) {
   return statusInfo[status]?.icon || 'circle-xmark'
 }
@@ -360,11 +386,10 @@ function getClass(status) {
   <div class="container">
 
     <div class="intro">
-      <h1>Which MIRTE robot should I choose?</h1>
+      <h1>{{ t('comparison.title') }}</h1>
 
       <p>
-        Compare the available MIRTE robots and find the best fit for your
-        classroom, project or learning goals.
+        {{ t('comparison.intro') }}
       </p>
     </div>
 
@@ -395,7 +420,7 @@ function getClass(status) {
 
           <tr>
             <td class="feature-column">
-              Price indication of components
+              {{ t('comparison.prices') }}
 
               <span class="tooltip-wrapper" @mouseenter="activeTooltip = 'robot-price'"
                 @mouseleave="activeTooltip = null">
@@ -404,8 +429,7 @@ function getClass(status) {
                 </ClientOnly>
 
                 <span v-if="activeTooltip === 'robot-price'" class="tooltip-box">
-                  Price indication when buying the components yourself. Actual costs
-                  depend on supplier, region, and selected options.
+                  {{ t('comparison.prices_tooltip') }}
                 </span>
               </span>
             </td>
@@ -437,7 +461,8 @@ function getClass(status) {
                     <FontAwesomeIcon icon="circle-info" />
                   </ClientOnly>
 
-                  <span v-if="activeTooltip === feature.name" :class="['tooltip-box', feature.name === 'Hardware models' ? 'tooltip-box-up' : '']">
+                  <span v-if="activeTooltip === feature.name"
+                    :class="['tooltip-box', feature.name === 'Hardware models' ? 'tooltip-box-up' : '']">
                     {{ feature.tooltip }}
                   </span>
 
@@ -455,7 +480,7 @@ function getClass(status) {
                   </ClientOnly>
                   {{ feature.values[robot.id].text }}
                   <span v-if="feature.values[robot.id].tooltip &&
-                    activeTooltip === feature.name + robot.id" 
+                    activeTooltip === feature.name + robot.id"
                     :class="['tooltip-box', robot.id === 'master' ? 'tooltip-box-right' : '']">
                     {{ feature.values[robot.id].tooltip }}
                   </span>
