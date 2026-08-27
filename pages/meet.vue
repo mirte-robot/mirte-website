@@ -46,6 +46,10 @@ const events = [
   { title: 'De Schatkamer van Alexander Pechtold', location: 'Lisse, NL', startDate: '2026-05-19', endDate: '2027-02-28', link: 'https://www.museumprinsenhofdelft.nl/activiteiten/zie-hoe-delft-bloeit-de-schatkamer-van-alexander-pechtold' },
   { title: 'ACM SIGSOFT Summer School for Software Engineering in Robotics 2026', location: 'Delft, NL', startDate: '2026-06-29', endDate: '2026-07-03', link: 'https://www.scivenia.com/en/event/summer-school-for-software-engineering-in-robotics-III' },
   { title: 'ComeniusFestival 2026', location: 'Nieuwegein, NL', startDate: '2026-06-25', link: 'https://www.comeniusfestival.nl/nederlandse-onderwijspremie/'},
+  { title: 'Beethoven Summit 2026', location: 'Delft, NL', startDate: '2026-10-06', link: 'https://beethovenzuidholland.nl/agenda/landelijke-conferentie-nationaal-versterkingsplan-microchiptalent/'},
+  { title: 'Open Science Festival 2026', location: 'Delft, NL', startDate: '2026-10-14', link: 'https://opensciencefestival.nl/'},
+  { title: 'Future Pulse - NL Robotics  2026', location: 'Eindhoven, NL', startDate: '2026-09-15', endDate: '2026-09-16', link: 'https://www.nlrobotics.nl/programma-future-pulse?lang=en-GB'},
+
 ]
 
 const today = new Date()
