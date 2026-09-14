@@ -53,6 +53,7 @@ const events = [
 ]
 
 const today = new Date()
+today.setHours(0, 0, 0, 0)
 const userLocale = typeof navigator !== 'undefined' ? navigator.language : 'en-US'
 
 function parseISODateAsUTC(dateStr) {
@@ -68,6 +69,8 @@ const eventsWithStatus = computed(() => {
     .map(e => {
       const start = new Date(parseISODateAsUTC(e.startDate))
       const end = e.endDate ? new Date(parseISODateAsUTC(e.endDate)) : start
+      start.setHours(0, 0, 0, 0)
+      end.setHours(0, 0, 0, 0)
       return {
         ...e,
         isPast: end < today,
@@ -75,7 +78,7 @@ const eventsWithStatus = computed(() => {
         endDateObj: end
       }
     })
-    .sort((a, b) => b.startDateObj - a.startDateObj) // sort ascending by start date
+    .sort((a, b) => b.endDateObj - a.endDateObj) // sort ascending by end date
 })
 
 </script>
@@ -110,7 +113,7 @@ const eventsWithStatus = computed(() => {
             :href="item.link || undefined"
             target="_blank"
             class="card text-decoration-none h-100 bg-light text-dark opacity-100"
-            :class="item.isPast ? 'bg-light text-dark opacity-75 bg-opacity-50' : 'bg-light text-dark opacity-100'"
+            :class="item.isPast ? 'bg-light text-dark opacity-75 bg-opacity-25' : 'bg-light text-dark opacity-100'"
           >
             <div class="card-body">
               <div class="card-title h5">{{ item.title }}</div>
