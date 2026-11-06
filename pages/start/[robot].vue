@@ -44,10 +44,10 @@ function getUrl() {
 
 function getUrlDXF() {
   if (base.value === "dxf") {
-    return "https://github.com/mirte-robot/mirte-frame/releases/download/0.1.0/dxfs.zip";
+    return "https://github.com/mirte-robot/mirte-frame/releases/download/0.2.0/dxfs.zip";
   } 
   if (base.value === "stl") {
-    return "https://github.com/mirte-robot/mirte-frame/releases/download/0.1.0/stls.zip";
+    return "https://github.com/mirte-robot/mirte-frame/releases/download/0.2.0/stls.zip";
   } 
   return "https://github.com/mirte-robot/mirte-frame/releases/latest";
 }
