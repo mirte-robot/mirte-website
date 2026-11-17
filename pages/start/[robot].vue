@@ -28,13 +28,13 @@ const base = ref('dxf')
 // methods
 function getUrl() {
   if (software.value === "orange_pi_zero2") {
-    return "https://buildmirte.me.tudelft.nl/latest/pioneer/";
+    return "https://surfdrive.surf.nl/public.php/dav/files/JiHMRYa5xP7YkFr/mirte_orangepizero2_2026-08-20_10_05_49_0.2.1.img.xz";
   }
   if (software.value === "orange_pi_3b") {
-    return "https://buildmirte.me.tudelft.nl/latest/orangepi3b/";
+    return "https://surfdrive.surf.nl/public.php/dav/files/JiHMRYa5xP7YkFr/mirte_orangepi3b_2026-08-20_10_06_06_0.2.1.img.xz";
   } 
   if (software.value === "raspberry_pi") {
-    return "https://buildmirte.me.tudelft.nl/latest/rpi/";
+    return "https://surfdrive.surf.nl/public.php/dav/files/JiHMRYa5xP7YkFr/mirte_rpi4b_2026-08-20_15_20_24_0.2.1.img.xz";
   } 
   if (software.value === "latest_release") {
     return "https://github.com/mirte-robot/mirte-sd-image-tools/releases/latest";
